@@ -1,6 +1,6 @@
-## Semantic Multi-Modal Framework for Early Stage Anomaly Detection in Lithium-Ion
-----------------------------------------------------------------------------------
-Batteries
+## Semantic Multi-Modal Framework for Early Stage Anomaly Detection in Lithium-Ion Batteries
+--------------------------------------------------------------------------------------------
+
 ## 📋 Overview
 SAFE-LIB is an ontology based framework for anomaly detection in lithium-ion batteries (LIBs) that combines heterogeneous data sources including time series sensor measurements and thermal imaging—within a modular semantic reasoning architecture. By integrating stream reasoning with domain knowledge representation, SAFE-LIB enables early detection of safety-critical events such as overheating, thermal imbalance, and other battery anomalies.
 This work addresses key limitations in current battery monitoring approaches by:
