@@ -12,7 +12,7 @@ This work addresses key limitations in current battery monitoring approaches by:
 
 ##  Architecture
 
-
+```text
 ┌─────────────────────────────────────────────────────────────┐
 │                       Data Layer                            │
 │  ┌──────────────┐              ┌─────────────────────────┐  │ 
@@ -43,9 +43,7 @@ This work addresses key limitations in current battery monitoring approaches by:
                              ▼
           ┌──────────────────────────────────────────┐
           │      Anomaly Detection & Explanation     │
-          └──────────────────────────────────────────┘
-
-
+          └──────────────────────────────────────────┘ 
 
 ## Getting Started
 Prerequisites
