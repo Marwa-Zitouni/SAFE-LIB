@@ -9,7 +9,6 @@ This work addresses key limitations in current battery monitoring approaches by:
 2-Providing interpretable explanations through ontology-based reasoning
 3-Enabling real-time detection via C-SPARQL stream reasoning
 4-Supporting Industry 5.0 principles through human centric, transparent AI
-
 ##  Architecture
 
 ```text
@@ -44,8 +43,9 @@ This work addresses key limitations in current battery monitoring approaches by:
           ┌──────────────────────────────────────────┐
           │      Anomaly Detection & Explanation     │
           └──────────────────────────────────────────┘ 
-
+```
 ## Getting Started
+
 Prerequisites
 
 Python 3.8 or higher
