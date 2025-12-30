@@ -1,0 +1,1948 @@
+@prefix : <http://ontology.eil.utoronto.ca/icity/SSN/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://ontology.eil.utoronto.ca/icity/SSN/> a owl:Ontology;
+  <http://purl.org/dc/elements/1.1/description> "Ontology to capture concepts related to sensors and their observations. Directly reuses the SSN Ontology; adds classes and properties for organization of terms.";
+  <http://purl.org/dc/elements/1.1/title> "SSN Ontology";
+  <http://purl.org/dc/terms/created> "2017-04-17"^^xsd:date;
+  <http://purl.org/dc/terms/creator> _:genid1 .
+
+_:genid1 a <http://xmlns.com/foaf/0.1/Agent>;
+  <http://xmlns.com/foaf/0.1/name> "W3C/OGC Spatial Data on the Web Working Group"@en .
+
+<http://ontology.eil.utoronto.ca/icity/SSN/> <http://purl.org/dc/terms/license> <http://www.opengeospatial.org/ogc/Software>,
+    <http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document>;
+  <http://purl.org/dc/terms/rights> "Copyright 2017 W3C/OGC.";
+  <http://purl.org/dc/terms/title> "Semantic Sensor Network Ontology"@en, "Sensor, Observation, Sample, and Actuator (SOSA) Ontology"@en;
+  <http://purl.org/vocab/vann/preferredNamespacePrefix> "ssn";
+  rdfs:seeAlso <https://www.w3.org/2015/spatial/wiki/Semantic_Sensor_Network_Ontology>;
+  owl:imports <http://www.w3.org/ns/sosa/>, <http://www.w3.org/ns/ssn/>;
+  owl:versionIRI <http://ontology.eil.utoronto.ca/icity/SSN/1.0/> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://creativecommons.org/ns#license
+
+<http://creativecommons.org/ns#license> a owl:AnnotationProperty .
+# 
+# http://purl.org/dc/elements/1.1/creator
+
+<http://purl.org/dc/elements/1.1/creator> a owl:AnnotationProperty .
+# 
+# http://purl.org/dc/elements/1.1/date
+
+<http://purl.org/dc/elements/1.1/date> a owl:AnnotationProperty .
+# 
+# http://purl.org/dc/elements/1.1/description
+
+<http://purl.org/dc/elements/1.1/description> a owl:AnnotationProperty .
+# 
+# http://purl.org/dc/elements/1.1/issued
+
+<http://purl.org/dc/elements/1.1/issued> a owl:AnnotationProperty .
+# 
+# http://purl.org/dc/elements/1.1/title
+
+<http://purl.org/dc/elements/1.1/title> a owl:AnnotationProperty .
+# 
+# http://purl.org/dc/terms/created
+
+<http://purl.org/dc/terms/created> a owl:AnnotationProperty .
+# 
+# http://purl.org/dc/terms/creator
+
+<http://purl.org/dc/terms/creator> a owl:AnnotationProperty .
+# 
+# http://purl.org/dc/terms/description
+
+<http://purl.org/dc/terms/description> a owl:AnnotationProperty .
+# 
+# http://purl.org/dc/terms/issued
+
+<http://purl.org/dc/terms/issued> a owl:AnnotationProperty .
+# 
+# http://purl.org/dc/terms/license
+
+<http://purl.org/dc/terms/license> a owl:AnnotationProperty .
+# 
+# http://purl.org/dc/terms/modified
+
+<http://purl.org/dc/terms/modified> a owl:AnnotationProperty .
+# 
+# http://purl.org/dc/terms/rights
+
+<http://purl.org/dc/terms/rights> a owl:AnnotationProperty .
+# 
+# http://purl.org/dc/terms/title
+
+<http://purl.org/dc/terms/title> a owl:AnnotationProperty .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+
+<http://purl.org/vocab/vann/preferredNamespacePrefix> a owl:AnnotationProperty .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+
+<http://purl.org/vocab/vann/preferredNamespaceUri> a owl:AnnotationProperty .
+# 
+# http://schema.org/domainIncludes
+
+<http://schema.org/domainIncludes> a owl:AnnotationProperty .
+# 
+# http://schema.org/rangeIncludes
+
+<http://schema.org/rangeIncludes> a owl:AnnotationProperty .
+# 
+# http://www.w3.org/2001/XMLSchema#pattern
+
+xsd:pattern a owl:AnnotationProperty .
+# 
+# http://www.w3.org/2002/07/owl#versionInfo
+
+owl:versionInfo a owl:AnnotationProperty .
+# 
+# http://www.w3.org/2004/02/skos/core#changeNote
+
+<http://www.w3.org/2004/02/skos/core#changeNote> a owl:AnnotationProperty .
+# 
+# http://www.w3.org/2004/02/skos/core#definition
+
+<http://www.w3.org/2004/02/skos/core#definition> a owl:AnnotationProperty .
+# 
+# http://www.w3.org/2004/02/skos/core#editorialNote
+
+<http://www.w3.org/2004/02/skos/core#editorialNote> a owl:AnnotationProperty .
+# 
+# http://www.w3.org/2004/02/skos/core#example
+
+<http://www.w3.org/2004/02/skos/core#example> a owl:AnnotationProperty .
+# 
+# http://www.w3.org/2004/02/skos/core#historyNote
+
+<http://www.w3.org/2004/02/skos/core#historyNote> a owl:AnnotationProperty .
+# 
+# http://www.w3.org/2004/02/skos/core#note
+
+<http://www.w3.org/2004/02/skos/core#note> a owl:AnnotationProperty .
+# 
+# http://www.w3.org/2004/02/skos/core#prefLabel
+
+<http://www.w3.org/2004/02/skos/core#prefLabel> a owl:AnnotationProperty .
+# 
+# http://www.w3.org/2004/02/skos/core#scopeNote
+
+<http://www.w3.org/2004/02/skos/core#scopeNote> a owl:AnnotationProperty .
+# 
+# http://www.w3.org/ns/adms#relatedDocumentation
+
+<http://www.w3.org/ns/adms#relatedDocumentation> a owl:AnnotationProperty .
+# 
+# http://xmlns.com/foaf/0.1/name
+
+<http://xmlns.com/foaf/0.1/name> a owl:AnnotationProperty .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+
+xsd:date a rdfs:Datatype .
+# 
+# http://www.w3.org/2001/XMLSchema#duration
+
+xsd:duration a rdfs:Datatype .
+# 
+# http://www.w3.org/2001/XMLSchema#gDay
+
+xsd:gDay a rdfs:Datatype .
+# 
+# http://www.w3.org/2001/XMLSchema#gMonth
+
+xsd:gMonth a rdfs:Datatype .
+# 
+# http://www.w3.org/2001/XMLSchema#gYear
+
+xsd:gYear a rdfs:Datatype .
+# 
+# http://www.w3.org/2001/XMLSchema#gYearMonth
+
+xsd:gYearMonth a rdfs:Datatype .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://example.org/anomaly#hasTime
+
+<http://example.org/anomaly#hasTime> a owl:ObjectProperty .
+# 
+# http://example.org/anomaly.owl#concernBy
+
+<http://example.org/anomaly.owl#concernBy> a owl:ObjectProperty .
+# 
+# http://example.org/anomaly.owl#hosts
+
+<http://example.org/anomaly.owl#hosts> a owl:ObjectProperty .
+# 
+# http://ontology.eil.utoronto.ca/icity/SSN/ssnObjectProperty
+
+:ssnObjectProperty a owl:ObjectProperty .
+# 
+# http://www.w3.org/ns/sosa/actsOnProperty
+
+<http://www.w3.org/ns/sosa/actsOnProperty> a owl:ObjectProperty;
+  <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Actuation>;
+  <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/ActuatableProperty>;
+  rdfs:comment "Relation between an Actuation and the property of a FeatureOfInterest it is acting upon."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/sosa/>;
+  rdfs:label "acts on property"@en;
+  rdfs:subPropertyOf :ssnObjectProperty;
+  owl:inverseOf <http://www.w3.org/ns/sosa/isActedOnBy>;
+  <http://www.w3.org/2004/02/skos/core#definition> "Relation between an Actuation and the property of a FeatureOfInterest it is acting upon."@en;
+  <http://www.w3.org/2004/02/skos/core#example> "In the activity (Actuation) of automatically closing a window if the temperature in a room drops below 20 degrees Celsius, the property on which the Actuator acts upon is the state of the window as it changes from being open to being closed. "@en .
+# 
+# http://www.w3.org/ns/sosa/hasFeatureOfInterest
+
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> a owl:ObjectProperty;
+  <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Actuation>, <http://www.w3.org/ns/sosa/Observation>,
+    <http://www.w3.org/ns/sosa/Sampling>;
+  <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/FeatureOfInterest>, <http://www.w3.org/ns/sosa/Sample>;
+  rdfs:comment "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/sosa/>;
+  rdfs:label "has feature of interest"@en;
+  rdfs:subPropertyOf :ssnObjectProperty;
+  owl:inverseOf <http://www.w3.org/ns/sosa/isFeatureOfInterestOf>;
+  <http://www.w3.org/2004/02/skos/core#definition> "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled."@en;
+  <http://www.w3.org/2004/02/skos/core#example> "For example, in an Observation of the weight of a person, the FeatureOfInterest is the person and the property is its weight."@en .
+# 
+# http://www.w3.org/ns/sosa/hasResult
+
+<http://www.w3.org/ns/sosa/hasResult> a owl:ObjectProperty;
+  <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Actuation>, <http://www.w3.org/ns/sosa/Observation>,
+    <http://www.w3.org/ns/sosa/Sampling>;
+  <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/Result>, <http://www.w3.org/ns/sosa/Sample>;
+  rdfs:comment "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/sosa/>;
+  rdfs:label "has result"@en;
+  rdfs:subPropertyOf :ssnObjectProperty;
+  owl:inverseOf <http://www.w3.org/ns/sosa/isResultOf>;
+  <http://www.w3.org/2004/02/skos/core#definition> "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."@en .
+# 
+# http://www.w3.org/ns/sosa/hasSample
+
+<http://www.w3.org/ns/sosa/hasSample> a owl:InverseFunctionalProperty, owl:ObjectProperty;
+  <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/FeatureOfInterest>;
+  <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/Sample>;
+  rdfs:comment "Relation between a FeatureOfInterest and the Sample used to represent it."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/sosa/>;
+  rdfs:label "has sample"@en;
+  rdfs:subPropertyOf :ssnObjectProperty;
+  owl:inverseOf <http://www.w3.org/ns/sosa/isSampleOf>;
+  <http://www.w3.org/2004/02/skos/core#definition> "Relation between a FeatureOfInterest and the Sample used to represent it."@en .
+# 
+# http://www.w3.org/ns/sosa/hosts
+
+<http://www.w3.org/ns/sosa/hosts> a owl:ObjectProperty;
+  <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Platform>;
+  <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/Actuator>, <http://www.w3.org/ns/sosa/Platform>,
+    <http://www.w3.org/ns/sosa/Sampler>, <http://www.w3.org/ns/sosa/Sensor>;
+  rdfs:comment "Relation between a Platform and a Sensor, Actuator, Sampler, or Platform, hosted or mounted on it."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/sosa/>;
+  rdfs:label "hosts"@en;
+  rdfs:subPropertyOf :ssnObjectProperty;
+  owl:inverseOf <http://www.w3.org/ns/sosa/isHostedBy>;
+  owl:propertyChainAxiom _:genid3 .
+
+_:genid3 a rdf:List;
+  rdf:first <http://www.w3.org/ns/ssn/inDeployment>;
+  rdf:rest _:genid2 .
+
+_:genid2 a rdf:List;
+  rdf:first <http://www.w3.org/ns/ssn/deployedSystem>;
+  rdf:rest rdf:nil .
+
+<http://www.w3.org/ns/sosa/hosts> <http://www.w3.org/2004/02/skos/core#definition>
+    "Relation between a Platform and a Sensor, Actuator, Sampler, or Platform, hosted or mounted on it."@en .
+# 
+# http://www.w3.org/ns/sosa/isActedOnBy
+
+<http://www.w3.org/ns/sosa/isActedOnBy> a owl:ObjectProperty;
+  <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/ActuatableProperty>;
+  <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/Actuation>;
+  rdfs:comment "Relation between an ActuatableProperty of a FeatureOfInterest and an Actuation changing its state."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/sosa/>;
+  rdfs:label "is acted on by"@en;
+  rdfs:subPropertyOf :ssnObjectProperty;
+  <http://www.w3.org/2004/02/skos/core#definition> "Relation between an ActuatableProperty of a FeatureOfInterest and an Actuation changing its state."@en;
+  <http://www.w3.org/2004/02/skos/core#example> "In the activity (Actuation) of automatically closing a window if the temperature in a room drops below 20 degrees Celsius, the property on which the Actuator acts upon is the state of the window as it changes from being open to being closed. "@en .
+# 
+# http://www.w3.org/ns/sosa/isFeatureOfInterestOf
+
+<http://www.w3.org/ns/sosa/isFeatureOfInterestOf> a owl:ObjectProperty;
+  <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/FeatureOfInterest>,
+    <http://www.w3.org/ns/sosa/Sample>;
+  <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/Actuation>, <http://www.w3.org/ns/sosa/Observation>,
+    <http://www.w3.org/ns/sosa/Sampling>;
+  rdfs:comment "A relation between a FeatureOfInterest and an Observation about it, an Actuation acting on it, or an act of Sampling that sampled it."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/sosa/>;
+  rdfs:label "is feature of interest of"@en;
+  rdfs:subPropertyOf :ssnObjectProperty;
+  <http://www.w3.org/2004/02/skos/core#definition> "A relation between a FeatureOfInterest and an Observation about it, an Actuation acting on it, or an act of Sampling that sampled it."@en .
+# 
+# http://www.w3.org/ns/sosa/isHostedBy
+
+<http://www.w3.org/ns/sosa/isHostedBy> a owl:ObjectProperty;
+  <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Actuator>, <http://www.w3.org/ns/sosa/Platform>,
+    <http://www.w3.org/ns/sosa/Sampler>, <http://www.w3.org/ns/sosa/Sensor>;
+  <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/Platform>;
+  rdfs:comment "Relation between a Sensor, Actuator, Sampler, or Platform, and the Platform that it is mounted on or hosted by."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/sosa/>;
+  rdfs:label "is hosted by"@en;
+  rdfs:subPropertyOf :ssnObjectProperty;
+  <http://www.w3.org/2004/02/skos/core#definition> "Relation between a Sensor, Actuator, Sampler, or Platform, and the Platform that it is mounted on or hosted by."@en .
+# 
+# http://www.w3.org/ns/sosa/isObservedBy
+
+<http://www.w3.org/ns/sosa/isObservedBy> a owl:ObjectProperty;
+  <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/ObservableProperty>;
+  <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/Sensor>;
+  rdfs:comment "Relation between an ObservableProperty and the Sensor able to observe it."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/sosa/>;
+  rdfs:label "is observed by"@en;
+  rdfs:subPropertyOf :ssnObjectProperty;
+  owl:inverseOf <http://www.w3.org/ns/sosa/observes>;
+  <http://www.w3.org/2004/02/skos/core#definition> "Relation between an ObservableProperty and the Sensor able to observe it."@en .
+# 
+# http://www.w3.org/ns/sosa/isResultOf
+
+<http://www.w3.org/ns/sosa/isResultOf> a owl:ObjectProperty;
+  <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Result>, <http://www.w3.org/ns/sosa/Sample>;
+  <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/Actuation>, <http://www.w3.org/ns/sosa/Observation>,
+    <http://www.w3.org/ns/sosa/Sampling>;
+  rdfs:comment "Relation linking a Result to the Observation or Actuation or act of Sampling that created or caused it."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/sosa/>;
+  rdfs:label "is result of"@en;
+  rdfs:subPropertyOf :ssnObjectProperty;
+  <http://www.w3.org/2004/02/skos/core#definition> "Relation linking a Result to the Observation or Actuation or act of Sampling that created or caused it."@en .
+# 
+# http://www.w3.org/ns/sosa/isSampleOf
+
+<http://www.w3.org/ns/sosa/isSampleOf> a owl:FunctionalProperty, owl:ObjectProperty;
+  <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Sample>;
+  <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/FeatureOfInterest>;
+  rdfs:comment "Relation from a Sample to the FeatureOfInterest that it is intended to be representative of."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/sosa/>;
+  rdfs:label "is sample of"@en;
+  rdfs:subPropertyOf :ssnObjectProperty;
+  <http://www.w3.org/2004/02/skos/core#definition> "Relation from a Sample to the FeatureOfInterest that it is intended to be representative of."@en .
+# 
+# http://www.w3.org/ns/sosa/madeActuation
+
+<http://www.w3.org/ns/sosa/madeActuation> a owl:ObjectProperty;
+  <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Actuator>;
+  <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/Actuation>;
+  rdfs:comment "Relation between an Actuator and the Actuation it has made."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/sosa/>;
+  rdfs:label "made actuation"@en;
+  rdfs:subPropertyOf :ssnObjectProperty;
+  owl:inverseOf <http://www.w3.org/ns/sosa/madeByActuator>;
+  <http://www.w3.org/2004/02/skos/core#definition> "Relation between an Actuator and the Actuation it has made."@en .
+# 
+# http://www.w3.org/ns/sosa/madeByActuator
+
+<http://www.w3.org/ns/sosa/madeByActuator> a owl:ObjectProperty;
+  <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Actuation>;
+  <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/Actuator>;
+  rdfs:comment "Relation linking an Actuation to the Actuator that made that Actuation."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/sosa/>;
+  rdfs:label "made by actuator"@en;
+  rdfs:subPropertyOf :ssnObjectProperty;
+  <http://www.w3.org/2004/02/skos/core#definition> "Relation linking an Actuation to the Actuator that made that Actuation."@en .
+# 
+# http://www.w3.org/ns/sosa/madeBySampler
+
+<http://www.w3.org/ns/sosa/madeBySampler> a owl:ObjectProperty;
+  <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Sampling>;
+  <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/Sampler>;
+  rdfs:comment "Relation linking an act of Sampling to the Sampler (sampling device or entity) that made it."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/sosa/>;
+  rdfs:label "made by sampler"@en;
+  rdfs:subPropertyOf :ssnObjectProperty;
+  owl:inverseOf <http://www.w3.org/ns/sosa/madeSampling>;
+  <http://www.w3.org/2004/02/skos/core#definition> "Relation linking an act of Sampling to the Sampler (sampling device or entity) that made it."@en .
+# 
+# http://www.w3.org/ns/sosa/madeBySensor
+
+<http://www.w3.org/ns/sosa/madeBySensor> a owl:ObjectProperty;
+  <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Observation>;
+  <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/Sensor>;
+  rdfs:comment "Relation between an Observation and the Sensor which made the Observation."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/sosa/>;
+  rdfs:label "made by sensor"@en;
+  rdfs:subPropertyOf :ssnObjectProperty;
+  owl:inverseOf <http://www.w3.org/ns/sosa/madeObservation>;
+  <http://www.w3.org/2004/02/skos/core#definition> "Relation between an Observation and the Sensor which made the Observation."@en .
+# 
+# http://www.w3.org/ns/sosa/madeObservation
+
+<http://www.w3.org/ns/sosa/madeObservation> a owl:ObjectProperty;
+  <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Sensor>;
+  <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/Observation>;
+  rdfs:comment "Relation between a Sensor and an Observation made by the Sensor."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/sosa/>;
+  rdfs:label "made observation"@en;
+  rdfs:subPropertyOf :ssnObjectProperty;
+  <http://www.w3.org/2004/02/skos/core#definition> "Relation between a Sensor and an Observation made by the Sensor."@en .
+# 
+# http://www.w3.org/ns/sosa/madeSampling
+
+<http://www.w3.org/ns/sosa/madeSampling> a owl:ObjectProperty;
+  <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Sampler>;
+  <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/Sampling>;
+  rdfs:comment "Relation between a Sampler (sampling device or entity) and the Sampling act it performed."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/sosa/>;
+  rdfs:label "made sampling"@en;
+  rdfs:subPropertyOf :ssnObjectProperty;
+  <http://www.w3.org/2004/02/skos/core#definition> "Relation between a Sampler (sampling device or entity) and the Sampling act it performed."@en .
+# 
+# http://www.w3.org/ns/sosa/observedProperty
+
+<http://www.w3.org/ns/sosa/observedProperty> a owl:ObjectProperty;
+  <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Observation>;
+  <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/ObservableProperty>;
+  rdfs:comment "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/sosa/>;
+  rdfs:label "observed property"@en;
+  rdfs:subPropertyOf :ssnObjectProperty;
+  <http://www.w3.org/2004/02/skos/core#definition> "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation."@en .
+# 
+# http://www.w3.org/ns/sosa/observes
+
+<http://www.w3.org/ns/sosa/observes> a owl:ObjectProperty;
+  <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Sensor>;
+  <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/ObservableProperty>;
+  rdfs:comment "Relation between a Sensor and an ObservableProperty that it is capable of sensing."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/sosa/>;
+  rdfs:label "observes"@en;
+  rdfs:subPropertyOf <http://www.w3.org/ns/ssn/forProperty>;
+  <http://www.w3.org/2004/02/skos/core#definition> "Relation between a Sensor and an ObservableProperty that it is capable of sensing."@en .
+# 
+# http://www.w3.org/ns/sosa/phenomenonTime
+
+<http://www.w3.org/ns/sosa/phenomenonTime> a owl:ObjectProperty;
+  <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Actuation>, <http://www.w3.org/ns/sosa/Observation>,
+    <http://www.w3.org/ns/sosa/Sampling>;
+  <http://schema.org/rangeIncludes> <http://www.w3.org/2006/time#TemporalEntity>;
+  rdfs:comment "The time that the Result of an Observation, Actuation or Sampling applies to the FeatureOfInterest. Not necessarily the same as the resultTime. May be an Interval or an Instant, or some other compound TemporalEntity."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/sosa/>;
+  rdfs:label "phenomenon time"@en;
+  rdfs:subPropertyOf :ssnObjectProperty;
+  <http://www.w3.org/2004/02/skos/core#definition> "The time that the Result of an Observation, Actuation or Sampling applies to the FeatureOfInterest. Not necessarily the same as the resultTime. May be an Interval or an Instant, or some other compound TemporalEntity."@en .
+# 
+# http://www.w3.org/ns/sosa/usedProcedure
+
+<http://www.w3.org/ns/sosa/usedProcedure> a owl:ObjectProperty;
+  <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Actuation>, <http://www.w3.org/ns/sosa/Observation>,
+    <http://www.w3.org/ns/sosa/Sampling>;
+  <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/Procedure>;
+  rdfs:comment "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/sosa/>;
+  rdfs:label "used procedure"@en;
+  rdfs:subPropertyOf :ssnObjectProperty;
+  owl:propertyChainAxiom _:genid5 .
+
+_:genid5 a rdf:List;
+  rdf:first <http://www.w3.org/ns/sosa/madeByActuator>;
+  rdf:rest _:genid4 .
+
+_:genid4 a rdf:List;
+  rdf:first <http://www.w3.org/ns/ssn/implements>;
+  rdf:rest rdf:nil .
+
+<http://www.w3.org/ns/sosa/usedProcedure> owl:propertyChainAxiom _:genid7 .
+
+_:genid7 a rdf:List;
+  rdf:first <http://www.w3.org/ns/sosa/madeBySampler>;
+  rdf:rest _:genid6 .
+
+_:genid6 a rdf:List;
+  rdf:first <http://www.w3.org/ns/ssn/implements>;
+  rdf:rest rdf:nil .
+
+<http://www.w3.org/ns/sosa/usedProcedure> owl:propertyChainAxiom _:genid9 .
+
+_:genid9 a rdf:List;
+  rdf:first <http://www.w3.org/ns/sosa/madeBySensor>;
+  rdf:rest _:genid8 .
+
+_:genid8 a rdf:List;
+  rdf:first <http://www.w3.org/ns/ssn/implements>;
+  rdf:rest rdf:nil .
+
+<http://www.w3.org/ns/sosa/usedProcedure> <http://www.w3.org/2004/02/skos/core#definition>
+    "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler."@en .
+# 
+# http://www.w3.org/ns/ssn/deployedOnPlatform
+
+<http://www.w3.org/ns/ssn/deployedOnPlatform> a owl:ObjectProperty;
+  rdfs:comment "Relation between a Deployment and the Platform on which the Systems are deployed."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/ssn/>;
+  rdfs:label "deployed on platform"@en;
+  rdfs:subPropertyOf :ssnObjectProperty;
+  owl:inverseOf <http://www.w3.org/ns/ssn/inDeployment>;
+  <http://www.w3.org/2004/02/skos/core#definition> "Relation between a Deployment and the Platform on which the Systems are deployed."@en .
+# 
+# http://www.w3.org/ns/ssn/deployedSystem
+
+<http://www.w3.org/ns/ssn/deployedSystem> a owl:ObjectProperty;
+  rdfs:comment "Relation between a Deployment and a deployed System."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/ssn/>;
+  rdfs:label "deployed system"@en;
+  rdfs:subPropertyOf :ssnObjectProperty;
+  owl:inverseOf <http://www.w3.org/ns/ssn/hasDeployment>;
+  <http://www.w3.org/2004/02/skos/core#definition> "Relation between a Deployment and a deployed System."@en .
+# 
+# http://www.w3.org/ns/ssn/detects
+
+<http://www.w3.org/ns/ssn/detects> a owl:ObjectProperty;
+  rdfs:comment "A relation from a Sensor to the Stimulus that the Sensor can detect. The Stimulus itself will be serving as a proxy for some ObservableProperty."@en,
+    "A relation from a Sensor to the Stimulus that the Sensor detects. The Stimulus itself will be serving as a proxy for some ObservableProperty."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/ssn/>;
+  rdfs:label "detects"@en;
+  rdfs:subPropertyOf :ssnObjectProperty;
+  <http://www.w3.org/2004/02/skos/core#definition> "A relation from a Sensor to the Stimulus that the Sensor detects. The Stimulus itself will be serving as a proxy for some ObservableProperty."@en .
+# 
+# http://www.w3.org/ns/ssn/forProperty
+
+<http://www.w3.org/ns/ssn/forProperty> a owl:ObjectProperty;
+  rdfs:comment "A relation between some aspect of an entity and a Property."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/ssn/>;
+  rdfs:label "for property"@en;
+  rdfs:subPropertyOf :ssnObjectProperty;
+  <http://www.w3.org/2004/02/skos/core#definition> "A relation between some aspect of an entity and a Property."@en;
+  <http://www.w3.org/2004/02/skos/core#example> "For example, from a Sensor to the properties it can observe; from an Actuator to the properties it can act on; from a Deployment to the properties it was installed to observe or act on; from a SystemCapability to the Property the capability is described for."@en .
+# 
+# http://www.w3.org/ns/ssn/hasDeployment
+
+<http://www.w3.org/ns/ssn/hasDeployment> a owl:ObjectProperty;
+  rdfs:comment "Relation between a System and a Deployment, recording that the System is deployed in that Deployment."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/ssn/>;
+  rdfs:label "has deployment"@en;
+  rdfs:subPropertyOf :ssnObjectProperty;
+  <http://www.w3.org/2004/02/skos/core#definition> "Relation between a System and a Deployment, recording that the System is deployed in that Deployment."@en .
+# 
+# http://www.w3.org/ns/ssn/hasInput
+
+<http://www.w3.org/ns/ssn/hasInput> a owl:ObjectProperty;
+  rdfs:comment "Relation between a Procedure and an Input to it."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/ssn/>;
+  rdfs:label "has input"@en;
+  rdfs:subPropertyOf :ssnObjectProperty;
+  <http://www.w3.org/2004/02/skos/core#definition> "Relation between a Procedure and an Input to it."@en .
+# 
+# http://www.w3.org/ns/ssn/hasOutput
+
+<http://www.w3.org/ns/ssn/hasOutput> a owl:ObjectProperty;
+  rdfs:comment "Relation between a Procedure and an Output of it."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/ssn/>;
+  rdfs:label "has output"@en;
+  rdfs:subPropertyOf :ssnObjectProperty;
+  <http://www.w3.org/2004/02/skos/core#definition> "Relation between a Procedure and an Output of it."@en .
+# 
+# http://www.w3.org/ns/ssn/hasProperty
+
+<http://www.w3.org/ns/ssn/hasProperty> a owl:ObjectProperty;
+  rdfs:comment "Relation between an entity and a Property of that entity."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/ssn/>;
+  rdfs:label "has property"@en;
+  rdfs:subPropertyOf :ssnObjectProperty;
+  owl:inverseOf <http://www.w3.org/ns/ssn/isPropertyOf>;
+  <http://www.w3.org/2004/02/skos/core#definition> "Relation between an entity and a Property of that entity."@en .
+# 
+# http://www.w3.org/ns/ssn/hasSubSystem
+
+<http://www.w3.org/ns/ssn/hasSubSystem> a owl:ObjectProperty;
+  rdfs:comment "Relation between a System and its component parts."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/ssn/>;
+  rdfs:label "has subsystem"@en;
+  rdfs:subPropertyOf :ssnObjectProperty;
+  <http://www.w3.org/2004/02/skos/core#definition> "Relation between a System and its component parts."@en .
+# 
+# http://www.w3.org/ns/ssn/implementedBy
+
+<http://www.w3.org/ns/ssn/implementedBy> a owl:ObjectProperty;
+  rdfs:comment "Relation between a Procedure (an algorithm, procedure or method) and an entity that implements that Procedure in some executable way."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/ssn/>;
+  rdfs:label "implemented by"@en;
+  rdfs:subPropertyOf :ssnObjectProperty;
+  owl:inverseOf <http://www.w3.org/ns/ssn/implements>;
+  <http://www.w3.org/2004/02/skos/core#definition> "Relation between a Procedure (an algorithm, procedure or method) and an entity that implements that Procedure in some executable way."@en;
+  <http://www.w3.org/2004/02/skos/core#example> "For example, the relationship between a scientific measuring Procedure and a sensor that senses via that Procedure."@en .
+# 
+# http://www.w3.org/ns/ssn/implements
+
+<http://www.w3.org/ns/ssn/implements> a owl:ObjectProperty;
+  rdfs:comment "Relation between an entity that implements a Procedure in some executable way and the Procedure (an algorithm, procedure or method)."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/ssn/>;
+  rdfs:label "implements"@en;
+  rdfs:subPropertyOf :ssnObjectProperty;
+  <http://www.w3.org/2004/02/skos/core#definition> "Relation between an entity that implements a Procedure in some executable way and the Procedure (an algorithm, procedure or method)."@en;
+  <http://www.w3.org/2004/02/skos/core#example> "For example, the relationship between a sensor and the scientific measuring Procedure via which it senses."@en .
+# 
+# http://www.w3.org/ns/ssn/inDeployment
+
+<http://www.w3.org/ns/ssn/inDeployment> a owl:ObjectProperty;
+  rdfs:comment "Relation between a Platform and a Deployment, meaning that the deployedSystems of the Deployment are hosted on the Platform."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/ssn/>;
+  rdfs:label "in deployment"@en;
+  rdfs:subPropertyOf :ssnObjectProperty;
+  <http://www.w3.org/2004/02/skos/core#definition> "Relation between a Platform and a Deployment, meaning that the deployedSystems of the Deployment are hosted on the Platform."@en;
+  <http://www.w3.org/2004/02/skos/core#example> "For example, a relation between a buoy and a deployment of several Sensors."@en .
+# 
+# http://www.w3.org/ns/ssn/isPropertyOf
+
+<http://www.w3.org/ns/ssn/isPropertyOf> a owl:ObjectProperty;
+  rdfs:comment "Relation between a Property and the entity it belongs to."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/ssn/>;
+  rdfs:label "is property of"@en;
+  rdfs:subPropertyOf :ssnObjectProperty;
+  <http://www.w3.org/2004/02/skos/core#definition> "Relation between a Property and the entity it belongs to."@en .
+# 
+# http://www.w3.org/ns/ssn/isProxyFor
+
+<http://www.w3.org/ns/ssn/isProxyFor> a owl:ObjectProperty;
+  rdfs:comment "A relation from a Stimulus to the Property that the Stimulus is serving as a proxy for."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/ssn/>;
+  rdfs:label "is proxy for"@en;
+  rdfs:subPropertyOf :ssnObjectProperty;
+  <http://www.w3.org/2004/02/skos/core#definition> "A relation from a Stimulus to the Property that the Stimulus is serving as a proxy for."@en;
+  <http://www.w3.org/2004/02/skos/core#example> "For example, the expansion of quicksilver is a stimulus that serves as a proxy for some temperature property. An increase or decrease in the velocity of spinning cups on a wind sensor is serving as a proxy for the wind speed."@en .
+# 
+# http://www.w3.org/ns/ssn/wasOriginatedBy
+
+<http://www.w3.org/ns/ssn/wasOriginatedBy> a owl:FunctionalProperty, owl:ObjectProperty;
+  rdfs:comment "Relation between an Observation and the Stimulus that originated it."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/ssn/>;
+  rdfs:label "was originated by"@en;
+  rdfs:subPropertyOf :ssnObjectProperty;
+  <http://www.w3.org/2004/02/skos/core#definition> "Relation between an Observation and the Stimulus that originated it."@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://ontology.eil.utoronto.ca/icity/SSN/ssnDataProperty
+
+:ssnDataProperty a owl:DatatypeProperty .
+# 
+# http://www.w3.org/2006/time#inXSDDateTimeStamp
+
+<http://www.w3.org/2006/time#inXSDDateTimeStamp> a owl:DatatypeProperty .
+# 
+# http://www.w3.org/ns/sosa/hasSimpleResult
+
+<http://www.w3.org/ns/sosa/hasSimpleResult> a owl:DatatypeProperty;
+  <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Actuation>, <http://www.w3.org/ns/sosa/Observation>,
+    <http://www.w3.org/ns/sosa/Sampling>;
+  rdfs:comment "The simple value of an Observation or Actuation or act of Sampling."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/sosa/>;
+  rdfs:label "has simple result"@en;
+  rdfs:subPropertyOf :ssnDataProperty;
+  <http://www.w3.org/2004/02/skos/core#definition> "The simple value of an Observation or Actuation or act of Sampling."@en;
+  <http://www.w3.org/2004/02/skos/core#example> "For instance, the values 23 or true."@en .
+# 
+# http://www.w3.org/ns/sosa/resultTime
+
+<http://www.w3.org/ns/sosa/resultTime> a owl:DatatypeProperty;
+  <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Actuation>, <http://www.w3.org/ns/sosa/Observation>,
+    <http://www.w3.org/ns/sosa/Sampling>;
+  rdfs:comment "The result time is the instant of time when the Observation, Actuation or Sampling activity was completed."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/sosa/>;
+  rdfs:label "result time"@en;
+  rdfs:range xsd:dateTime;
+  rdfs:subPropertyOf :ssnDataProperty;
+  <http://www.w3.org/2004/02/skos/core#definition> "The result time is the instant of time when the Observation, Actuation or Sampling activity was completed."@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://example.org/anomaly.owl#Cell1
+
+<http://example.org/anomaly.owl#Cell1> a owl:Class .
+# 
+# http://example.org/anomaly.owl#Situation
+
+<http://example.org/anomaly.owl#Situation> a owl:Class .
+# 
+# http://ontology.eil.utoronto.ca/icity/SSN/SSNThing
+
+:SSNThing a owl:Class .
+# 
+# http://purl.org/vocommons/voaf#Vocabulary
+
+<http://purl.org/vocommons/voaf#Vocabulary> a owl:Class;
+  rdfs:subClassOf :SSNThing .
+# 
+# http://www.w3.org/2006/time#Instant
+
+<http://www.w3.org/2006/time#Instant> a owl:Class .
+# 
+# http://www.w3.org/2006/time#TemporalEntity
+
+<http://www.w3.org/2006/time#TemporalEntity> a owl:Class;
+  rdfs:subClassOf :SSNThing .
+# 
+# http://www.w3.org/ns/sosa/ActuatableProperty
+
+<http://www.w3.org/ns/sosa/ActuatableProperty> a owl:Class;
+  rdfs:comment "An actuatable quality (property, characteristic) of a FeatureOfInterest."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/sosa/>;
+  rdfs:label "Actuatable Property"@en;
+  rdfs:subClassOf <http://www.w3.org/ns/ssn/Property>, _:genid10 .
+
+_:genid10 a owl:Restriction;
+  owl:allValuesFrom <http://www.w3.org/ns/sosa/Actuation>;
+  owl:onProperty <http://www.w3.org/ns/sosa/isActedOnBy> .
+
+<http://www.w3.org/ns/sosa/ActuatableProperty> <http://www.w3.org/2004/02/skos/core#definition>
+    "An actuatable quality (property, characteristic) of a FeatureOfInterest."@en;
+  <http://www.w3.org/2004/02/skos/core#example> "A window actuator acts by changing the state between a frame and a window. The ability of the window to be opened and closed is its ActuatableProperty."@en .
+# 
+# http://www.w3.org/ns/sosa/Actuation
+
+<http://www.w3.org/ns/sosa/Actuation> a owl:Class;
+  rdfs:comment "An Actuation carries out an (Actuation) Procedure to change the state of the world using an Actuator."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/sosa/>;
+  rdfs:label "Actuation"@en;
+  rdfs:subClassOf :SSNThing, _:genid11 .
+
+_:genid11 a owl:Restriction;
+  owl:allValuesFrom <http://www.w3.org/ns/sosa/ActuatableProperty>;
+  owl:onProperty <http://www.w3.org/ns/sosa/actsOnProperty> .
+
+<http://www.w3.org/ns/sosa/Actuation> rdfs:subClassOf _:genid12 .
+
+_:genid12 a owl:Restriction;
+  owl:allValuesFrom <http://www.w3.org/ns/sosa/FeatureOfInterest>;
+  owl:onProperty <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+
+<http://www.w3.org/ns/sosa/Actuation> rdfs:subClassOf _:genid13 .
+
+_:genid13 a owl:Restriction;
+  owl:allValuesFrom <http://www.w3.org/ns/sosa/Result>;
+  owl:onProperty <http://www.w3.org/ns/sosa/hasResult> .
+
+<http://www.w3.org/ns/sosa/Actuation> rdfs:subClassOf _:genid14 .
+
+_:genid14 a owl:Restriction;
+  owl:allValuesFrom <http://www.w3.org/ns/sosa/Actuator>;
+  owl:onProperty <http://www.w3.org/ns/sosa/madeByActuator> .
+
+<http://www.w3.org/ns/sosa/Actuation> rdfs:subClassOf _:genid15 .
+
+_:genid15 a owl:Restriction;
+  owl:allValuesFrom <http://www.w3.org/ns/sosa/Procedure>;
+  owl:onProperty <http://www.w3.org/ns/sosa/usedProcedure> .
+
+<http://www.w3.org/ns/sosa/Actuation> rdfs:subClassOf _:genid16 .
+
+_:genid16 a owl:Restriction;
+  owl:minCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onProperty <http://www.w3.org/ns/sosa/actsOnProperty> .
+
+<http://www.w3.org/ns/sosa/Actuation> rdfs:subClassOf _:genid17 .
+
+_:genid17 a owl:Restriction;
+  owl:minCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onProperty <http://www.w3.org/ns/sosa/hasResult> .
+
+<http://www.w3.org/ns/sosa/Actuation> rdfs:subClassOf _:genid18 .
+
+_:genid18 a owl:Restriction;
+  owl:cardinality "1"^^xsd:nonNegativeInteger;
+  owl:onProperty <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+
+<http://www.w3.org/ns/sosa/Actuation> rdfs:subClassOf _:genid19 .
+
+_:genid19 a owl:Restriction;
+  owl:cardinality "1"^^xsd:nonNegativeInteger;
+  owl:onProperty <http://www.w3.org/ns/sosa/madeByActuator> .
+
+<http://www.w3.org/ns/sosa/Actuation> rdfs:subClassOf _:genid20 .
+
+_:genid20 a owl:Restriction;
+  owl:cardinality "1"^^xsd:nonNegativeInteger;
+  owl:onProperty <http://www.w3.org/ns/sosa/resultTime> .
+
+<http://www.w3.org/ns/sosa/Actuation> <http://www.w3.org/2004/02/skos/core#definition>
+    "An Actuation carries out an (Actuation) Procedure to change the state of the world using an Actuator."@en;
+  <http://www.w3.org/2004/02/skos/core#example> "The activity of automatically closing a window if the temperature in a room drops below 20 degree Celsius. The activity is the Actuation and the device that closes the window is the Actuator. The Procedure is the rule, plan, or specification that defines the conditions that triggers the Actuation, here a drop in temperature. "@en .
+# 
+# http://www.w3.org/ns/sosa/Actuator
+
+<http://www.w3.org/ns/sosa/Actuator> a owl:Class;
+  rdfs:comment "A device that is used by, or implements, an (Actuation) Procedure that changes the state of the world."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/sosa/>;
+  rdfs:label "Actuator"@en;
+  rdfs:subClassOf <http://www.w3.org/ns/ssn/System>, _:genid21 .
+
+_:genid21 a owl:Restriction;
+  owl:allValuesFrom <http://www.w3.org/ns/sosa/Actuation>;
+  owl:onProperty <http://www.w3.org/ns/sosa/madeActuation> .
+
+<http://www.w3.org/ns/sosa/Actuator> rdfs:subClassOf _:genid22 .
+
+_:genid22 a owl:Restriction;
+  owl:allValuesFrom <http://www.w3.org/ns/sosa/ActuatableProperty>;
+  owl:onProperty <http://www.w3.org/ns/ssn/forProperty> .
+
+<http://www.w3.org/ns/sosa/Actuator> rdfs:subClassOf _:genid23 .
+
+_:genid23 a owl:Restriction;
+  owl:minCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onProperty <http://www.w3.org/ns/ssn/implements> .
+
+<http://www.w3.org/ns/sosa/Actuator> <http://www.w3.org/2004/02/skos/core#definition>
+    "A device that is used by, or implements, an (Actuation) Procedure that changes the state of the world."@en;
+  <http://www.w3.org/2004/02/skos/core#example> "A window actuator for automatic window control, i.e., opening or closing the window."@en .
+# 
+# http://www.w3.org/ns/sosa/FeatureOfInterest
+
+<http://www.w3.org/ns/sosa/FeatureOfInterest> a owl:Class;
+  rdfs:comment "The thing whose property is being estimated or calculated in the course of an Observation to arrive at a Result or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/sosa/>;
+  rdfs:label "Feature Of Interest"@en;
+  rdfs:subClassOf :SSNThing, _:genid24 .
+
+_:genid24 a owl:Restriction;
+  owl:allValuesFrom <http://www.w3.org/ns/sosa/Sample>;
+  owl:onProperty <http://www.w3.org/ns/sosa/hasSample> .
+
+<http://www.w3.org/ns/sosa/FeatureOfInterest> rdfs:subClassOf _:genid25 .
+
+_:genid25 a owl:Restriction;
+  owl:allValuesFrom <http://www.w3.org/ns/ssn/Property>;
+  owl:onProperty <http://www.w3.org/ns/ssn/hasProperty> .
+
+<http://www.w3.org/ns/sosa/FeatureOfInterest> rdfs:subClassOf _:genid26 .
+
+_:genid26 a owl:Restriction;
+  owl:minCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onProperty <http://www.w3.org/ns/ssn/hasProperty> .
+
+<http://www.w3.org/ns/sosa/FeatureOfInterest> <http://www.w3.org/2004/02/skos/core#definition>
+    "The thing whose property is being estimated or calculated in the course of an Observation to arrive at a Result or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling."@en;
+  <http://www.w3.org/2004/02/skos/core#example> "When measuring the height of a tree, the height is the observed ObservableProperty, 20m may be the Result of the Observation, and the tree is the FeatureOfInterest. A window is a FeatureOfInterest for an automatic window control Actuator."@en .
+# 
+# http://www.w3.org/ns/sosa/ObservableProperty
+
+<http://www.w3.org/ns/sosa/ObservableProperty> a owl:Class;
+  rdfs:comment "An observable quality (property, characteristic) of a FeatureOfInterest."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/sosa/>;
+  rdfs:label "Observable Property"@en;
+  rdfs:subClassOf <http://www.w3.org/ns/ssn/Property>, _:genid27 .
+
+_:genid27 a owl:Restriction;
+  owl:allValuesFrom <http://www.w3.org/ns/sosa/Sensor>;
+  owl:onProperty <http://www.w3.org/ns/sosa/isObservedBy> .
+
+<http://www.w3.org/ns/sosa/ObservableProperty> rdfs:subClassOf _:genid28 .
+
+_:genid28 a owl:Restriction;
+  owl:allValuesFrom <http://www.w3.org/ns/sosa/Observation>;
+  owl:onProperty _:genid29 .
+
+_:genid29 owl:inverseOf <http://www.w3.org/ns/sosa/observedProperty> .
+
+<http://www.w3.org/ns/sosa/ObservableProperty> rdfs:subClassOf _:genid30 .
+
+_:genid30 a owl:Restriction;
+  owl:allValuesFrom <http://www.w3.org/ns/ssn/Stimulus>;
+  owl:onProperty _:genid31 .
+
+_:genid31 owl:inverseOf <http://www.w3.org/ns/ssn/isProxyFor> .
+
+<http://www.w3.org/ns/sosa/ObservableProperty> <http://www.w3.org/2004/02/skos/core#definition>
+    "An observable quality (property, characteristic) of a FeatureOfInterest."@en;
+  <http://www.w3.org/2004/02/skos/core#example> "The height of a tree, the depth of a water body, or the temperature of a surface are examples of observable properties, while the value of a classic car is not (directly) observable but asserted."@en .
+# 
+# http://www.w3.org/ns/sosa/Observation
+
+<http://www.w3.org/ns/sosa/Observation> a owl:Class;
+  rdfs:comment "Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/sosa/>;
+  rdfs:label "Observation"@en;
+  rdfs:subClassOf :SSNThing, _:genid32 .
+
+_:genid32 a owl:Restriction;
+  owl:allValuesFrom <http://www.w3.org/ns/sosa/FeatureOfInterest>;
+  owl:onProperty <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+
+<http://www.w3.org/ns/sosa/Observation> rdfs:subClassOf _:genid33 .
+
+_:genid33 a owl:Restriction;
+  owl:allValuesFrom <http://www.w3.org/ns/sosa/Result>;
+  owl:onProperty <http://www.w3.org/ns/sosa/hasResult> .
+
+<http://www.w3.org/ns/sosa/Observation> rdfs:subClassOf _:genid34 .
+
+_:genid34 a owl:Restriction;
+  owl:allValuesFrom <http://www.w3.org/ns/sosa/Sensor>;
+  owl:onProperty <http://www.w3.org/ns/sosa/madeBySensor> .
+
+<http://www.w3.org/ns/sosa/Observation> rdfs:subClassOf _:genid35 .
+
+_:genid35 a owl:Restriction;
+  owl:allValuesFrom <http://www.w3.org/ns/sosa/ObservableProperty>;
+  owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> .
+
+<http://www.w3.org/ns/sosa/Observation> rdfs:subClassOf _:genid36 .
+
+_:genid36 a owl:Restriction;
+  owl:allValuesFrom <http://www.w3.org/ns/sosa/Procedure>;
+  owl:onProperty <http://www.w3.org/ns/sosa/usedProcedure> .
+
+<http://www.w3.org/ns/sosa/Observation> rdfs:subClassOf _:genid37 .
+
+_:genid37 a owl:Restriction;
+  owl:allValuesFrom <http://www.w3.org/ns/ssn/Stimulus>;
+  owl:onProperty <http://www.w3.org/ns/ssn/wasOriginatedBy> .
+
+<http://www.w3.org/ns/sosa/Observation> rdfs:subClassOf _:genid38 .
+
+_:genid38 a owl:Restriction;
+  owl:minCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onProperty <http://www.w3.org/ns/sosa/hasResult> .
+
+<http://www.w3.org/ns/sosa/Observation> rdfs:subClassOf _:genid39 .
+
+_:genid39 a owl:Restriction;
+  owl:cardinality "1"^^xsd:nonNegativeInteger;
+  owl:onProperty <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+
+<http://www.w3.org/ns/sosa/Observation> rdfs:subClassOf _:genid40 .
+
+_:genid40 a owl:Restriction;
+  owl:cardinality "1"^^xsd:nonNegativeInteger;
+  owl:onProperty <http://www.w3.org/ns/sosa/madeBySensor> .
+
+<http://www.w3.org/ns/sosa/Observation> rdfs:subClassOf _:genid41 .
+
+_:genid41 a owl:Restriction;
+  owl:cardinality "1"^^xsd:nonNegativeInteger;
+  owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> .
+
+<http://www.w3.org/ns/sosa/Observation> rdfs:subClassOf _:genid42 .
+
+_:genid42 a owl:Restriction;
+  owl:cardinality "1"^^xsd:nonNegativeInteger;
+  owl:onProperty <http://www.w3.org/ns/sosa/phenomenonTime> .
+
+<http://www.w3.org/ns/sosa/Observation> rdfs:subClassOf _:genid43 .
+
+_:genid43 a owl:Restriction;
+  owl:cardinality "1"^^xsd:nonNegativeInteger;
+  owl:onProperty <http://www.w3.org/ns/ssn/wasOriginatedBy> .
+
+<http://www.w3.org/ns/sosa/Observation> rdfs:subClassOf _:genid44 .
+
+_:genid44 a owl:Restriction;
+  owl:cardinality "1"^^xsd:nonNegativeInteger;
+  owl:onProperty <http://www.w3.org/ns/sosa/resultTime> .
+
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2004/02/skos/core#definition>
+    "Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with."@en;
+  <http://www.w3.org/2004/02/skos/core#example> "The activity of estimating the intensity of an Earthquake using the Mercalli intensity scale is an Observation as is measuring the moment magnitude, i.e., the energy released by said earthquake."@en .
+# 
+# http://www.w3.org/ns/sosa/Platform
+
+<http://www.w3.org/ns/sosa/Platform> a owl:Class;
+  rdfs:comment "A Platform is an entity that hosts other entities, particularly Sensors, Actuators, Samplers, and other Platforms."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/sosa/>;
+  rdfs:label "Platform"@en;
+  rdfs:subClassOf :SSNThing, _:genid45 .
+
+_:genid45 a owl:Restriction;
+  owl:allValuesFrom <http://www.w3.org/ns/ssn/System>;
+  owl:onProperty <http://www.w3.org/ns/sosa/hosts> .
+
+<http://www.w3.org/ns/sosa/Platform> rdfs:subClassOf _:genid46 .
+
+_:genid46 a owl:Restriction;
+  owl:allValuesFrom <http://www.w3.org/ns/ssn/Deployment>;
+  owl:onProperty <http://www.w3.org/ns/ssn/inDeployment> .
+
+<http://www.w3.org/ns/sosa/Platform> <http://www.w3.org/2004/02/skos/core#definition>
+    "A Platform is an entity that hosts other entities, particularly Sensors, Actuators, Samplers, and other Platforms."@en;
+  <http://www.w3.org/2004/02/skos/core#example> "A post, buoy, vehicle, ship, aircraft, satellite, cell-phone, human or animal may act as platforms for (technical or biological) sensors or actuators."@en .
+# 
+# http://www.w3.org/ns/sosa/Procedure
+
+<http://www.w3.org/ns/sosa/Procedure> a owl:Class;
+  rdfs:comment "A workflow, protocol, plan, algorithm, or computational method specifying how to make an Observation, create a Sample, or make a change to the state of the world (via an Actuator). A Procedure is re-usable, and might be involved in many Observations, Samplings, or Actuations. It explains the steps to be carried out to arrive at reproducible results."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/sosa/>;
+  rdfs:label "Procedure"@en;
+  rdfs:subClassOf :SSNThing, _:genid47 .
+
+_:genid47 a owl:Restriction;
+  owl:allValuesFrom <http://www.w3.org/ns/ssn/Input>;
+  owl:onProperty <http://www.w3.org/ns/ssn/hasInput> .
+
+<http://www.w3.org/ns/sosa/Procedure> rdfs:subClassOf _:genid48 .
+
+_:genid48 a owl:Restriction;
+  owl:allValuesFrom <http://www.w3.org/ns/ssn/Output>;
+  owl:onProperty <http://www.w3.org/ns/ssn/hasOutput> .
+
+<http://www.w3.org/ns/sosa/Procedure> rdfs:subClassOf _:genid49 .
+
+_:genid49 a owl:Restriction;
+  owl:allValuesFrom <http://www.w3.org/ns/ssn/System>;
+  owl:onProperty <http://www.w3.org/ns/ssn/implementedBy> .
+
+<http://www.w3.org/ns/sosa/Procedure> <http://www.w3.org/2004/02/skos/core#definition>
+    "A workflow, protocol, plan, algorithm, or computational method specifying how to make an Observation, create a Sample, or make a change to the state of the world (via an Actuator). A Procedure is re-usable, and might be involved in many Observations, Samplings, or Actuations. It explains the steps to be carried out to arrive at reproducible results."@en;
+  <http://www.w3.org/2004/02/skos/core#example> "The measured wind speed differs depending on the height of the sensor above the surface, e.g., due to friction. Consequently, procedures for measuring wind speed define a standard height for anemometers above ground, typically 10m for meteorological measures and 2m in Agrometeorology. This definition of height, sensor placement, and so forth are defined by the Procedure."@en;
+  <http://www.w3.org/2004/02/skos/core#note> "Many observations may be created via the same Procedure, the same way as many tables are assembled using the same instructions (as information objects, not their concrete realization)."@en .
+# 
+# http://www.w3.org/ns/sosa/Result
+
+<http://www.w3.org/ns/sosa/Result> a owl:Class;
+  rdfs:comment "The Result of an Observation, Actuation, or act of Sampling. To store an observation's simple result value one can use the hasSimpleResult property."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/sosa/>;
+  rdfs:label "Result"@en;
+  rdfs:subClassOf :SSNThing, _:genid50 .
+
+_:genid50 a owl:Restriction;
+  owl:minCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onProperty <http://www.w3.org/ns/sosa/isResultOf> .
+
+<http://www.w3.org/ns/sosa/Result> <http://www.w3.org/2004/02/skos/core#definition>
+    "The Result of an Observation, Actuation, or act of Sampling. To store an observation's simple result value one can use the hasSimpleResult property."@en;
+  <http://www.w3.org/2004/02/skos/core#example> "The value 20 as the height of a certain tree together with the unit, e.g., Meter."@en .
+# 
+# http://www.w3.org/ns/sosa/Sample
+
+<http://www.w3.org/ns/sosa/Sample> a owl:Class;
+  rdfs:comment "A Sample is the result from an act of Sampling."@en, "Feature which is intended to be representative of a FeatureOfInterest on which Observations may be made."@en,
+    "Physical samples are sometimes known as 'specimens'."@en, """Samples are artifacts of an observational strategy, and have no significant function outside of their role in the observation process. The characteristics of the samples themselves are of little interest, except perhaps to the manager of a sampling campaign.
+
+A Sample is intended to sample some FatureOfInterest, so there is an expectation of at least one isSampleOf property. However, in some cases the identity, and even the exact type, of the sampled feature may not be known when observations are made using the sampling features."""@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/sosa/>;
+  rdfs:label "Sample"@en;
+  rdfs:subClassOf <http://www.w3.org/ns/sosa/FeatureOfInterest>, <http://www.w3.org/ns/sosa/Result>,
+    _:genid51 .
+
+_:genid51 a owl:Restriction;
+  owl:allValuesFrom <http://www.w3.org/ns/sosa/Sampling>;
+  owl:onProperty <http://www.w3.org/ns/sosa/isResultOf> .
+
+<http://www.w3.org/ns/sosa/Sample> rdfs:subClassOf _:genid52 .
+
+_:genid52 a owl:Restriction;
+  owl:allValuesFrom <http://www.w3.org/ns/sosa/FeatureOfInterest>;
+  owl:onProperty <http://www.w3.org/ns/sosa/isSampleOf> .
+
+<http://www.w3.org/ns/sosa/Sample> rdfs:subClassOf _:genid53 .
+
+_:genid53 a owl:Restriction;
+  owl:minCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onProperty <http://www.w3.org/ns/sosa/isResultOf> .
+
+<http://www.w3.org/ns/sosa/Sample> rdfs:subClassOf _:genid54 .
+
+_:genid54 a owl:Restriction;
+  owl:minCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onProperty <http://www.w3.org/ns/sosa/isSampleOf> .
+
+<http://www.w3.org/ns/sosa/Sample> <http://www.w3.org/2004/02/skos/core#definition>
+    "Feature which is intended to be representative of a FeatureOfInterest on which Observations may be made."@en;
+  <http://www.w3.org/2004/02/skos/core#example> "A 'station' is essentially an identifiable locality where a sensor system or Procedure may be deployed and an observation made. In the context of the observation model, it connotes the 'world in the vicinity of the station', so the observed properties relate to the physical medium at the station, and not to any physical artifact such as a mooring, buoy, benchmark, monument, well, etc."@en,
+    "A statistical sample is often designed to be characteristic of an entire population, so that observations can be made regarding the sample that provide a good estimate of the properties of the population."@en;
+  <http://www.w3.org/2004/02/skos/core#note> "A transient sample, such as a ships-track or flight-line, might be identified and described, but is unlikely to be revisited exactly."@en .
+# 
+# http://www.w3.org/ns/sosa/Sampler
+
+<http://www.w3.org/ns/sosa/Sampler> a owl:Class;
+  rdfs:comment "A device that is used by, or implements, a Sampling Procedure to create or transform one or more samples."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/sosa/>;
+  rdfs:label "Sampler"@en;
+  rdfs:subClassOf <http://www.w3.org/ns/ssn/System>, _:genid55 .
+
+_:genid55 a owl:Restriction;
+  owl:allValuesFrom <http://www.w3.org/ns/sosa/Sampling>;
+  owl:onProperty <http://www.w3.org/ns/sosa/madeSampling> .
+
+<http://www.w3.org/ns/sosa/Sampler> rdfs:subClassOf _:genid56 .
+
+_:genid56 a owl:Restriction;
+  owl:minCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onProperty <http://www.w3.org/ns/ssn/implements> .
+
+<http://www.w3.org/ns/sosa/Sampler> <http://www.w3.org/2004/02/skos/core#definition>
+    "A device that is used by, or implements, a Sampling Procedure to create or transform one or more samples."@en;
+  <http://www.w3.org/2004/02/skos/core#example> "A ball mill, diamond drill, hammer, hypodermic syringe and needle, image Sensor or a soil auger can all act as sampling devices (i.e., be Samplers). However, sometimes the distinction between the Sampler and the Sensor is not evident, as they are packaged as a unit. A Sampler need not be a physical device."@en .
+# 
+# http://www.w3.org/ns/sosa/Sampling
+
+<http://www.w3.org/ns/sosa/Sampling> a owl:Class;
+  rdfs:comment "An act of Sampling carries out a sampling Procedure to create or transform one or more samples."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/sosa/>;
+  rdfs:label "Sampling"@en;
+  rdfs:subClassOf :SSNThing, _:genid57 .
+
+_:genid57 a owl:Restriction;
+  owl:allValuesFrom <http://www.w3.org/ns/sosa/FeatureOfInterest>;
+  owl:onProperty <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+
+<http://www.w3.org/ns/sosa/Sampling> rdfs:subClassOf _:genid58 .
+
+_:genid58 a owl:Restriction;
+  owl:allValuesFrom <http://www.w3.org/ns/sosa/Sample>;
+  owl:onProperty <http://www.w3.org/ns/sosa/hasResult> .
+
+<http://www.w3.org/ns/sosa/Sampling> rdfs:subClassOf _:genid59 .
+
+_:genid59 a owl:Restriction;
+  owl:allValuesFrom <http://www.w3.org/ns/sosa/Sampler>;
+  owl:onProperty <http://www.w3.org/ns/sosa/madeBySampler> .
+
+<http://www.w3.org/ns/sosa/Sampling> rdfs:subClassOf _:genid60 .
+
+_:genid60 a owl:Restriction;
+  owl:allValuesFrom <http://www.w3.org/ns/sosa/Procedure>;
+  owl:onProperty <http://www.w3.org/ns/sosa/usedProcedure> .
+
+<http://www.w3.org/ns/sosa/Sampling> rdfs:subClassOf _:genid61 .
+
+_:genid61 a owl:Restriction;
+  owl:minCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onProperty <http://www.w3.org/ns/sosa/hasResult> .
+
+<http://www.w3.org/ns/sosa/Sampling> rdfs:subClassOf _:genid62 .
+
+_:genid62 a owl:Restriction;
+  owl:cardinality "1"^^xsd:nonNegativeInteger;
+  owl:onProperty <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+
+<http://www.w3.org/ns/sosa/Sampling> rdfs:subClassOf _:genid63 .
+
+_:genid63 a owl:Restriction;
+  owl:cardinality "1"^^xsd:nonNegativeInteger;
+  owl:onProperty <http://www.w3.org/ns/sosa/madeBySampler> .
+
+<http://www.w3.org/ns/sosa/Sampling> rdfs:subClassOf _:genid64 .
+
+_:genid64 a owl:Restriction;
+  owl:cardinality "1"^^xsd:nonNegativeInteger;
+  owl:onProperty <http://www.w3.org/ns/sosa/resultTime> .
+
+<http://www.w3.org/ns/sosa/Sampling> <http://www.w3.org/2004/02/skos/core#definition>
+    "An act of Sampling carries out a sampling Procedure to create or transform one or more samples."@en;
+  <http://www.w3.org/2004/02/skos/core#example> "Crushing a rock sample in a ball mill."@en,
+    "Digging a pit through a soil sequence."@en, "Dividing a field site into quadrants."@en,
+    "Drawing blood from a patient."@en, "Drilling an observation well."@en, "Establishing a station for environmental monitoring."@en,
+    "Registering an image of the landscape."@en, "Selecting a subset of a population."@en,
+    "Sieving a powder to separate the subset finer than 100-mesh."@en, "Splitting a piece of drill-core to create two new samples."@en,
+    "Taking a diamond-drill core from a rock outcrop."@en .
+# 
+# http://www.w3.org/ns/sosa/Sensor
+
+<http://www.w3.org/ns/sosa/Sensor> a owl:Class;
+  rdfs:comment "Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/sosa/>;
+  rdfs:label "Sensor"@en;
+  rdfs:subClassOf <http://www.w3.org/ns/ssn/System>, _:genid65 .
+
+_:genid65 a owl:Restriction;
+  owl:allValuesFrom <http://www.w3.org/ns/sosa/Observation>;
+  owl:onProperty <http://www.w3.org/ns/sosa/madeObservation> .
+
+<http://www.w3.org/ns/sosa/Sensor> rdfs:subClassOf _:genid66 .
+
+_:genid66 a owl:Restriction;
+  owl:allValuesFrom <http://www.w3.org/ns/sosa/ObservableProperty>;
+  owl:onProperty <http://www.w3.org/ns/sosa/observes> .
+
+<http://www.w3.org/ns/sosa/Sensor> rdfs:subClassOf _:genid67 .
+
+_:genid67 a owl:Restriction;
+  owl:allValuesFrom <http://www.w3.org/ns/ssn/Stimulus>;
+  owl:onProperty <http://www.w3.org/ns/ssn/detects> .
+
+<http://www.w3.org/ns/sosa/Sensor> rdfs:subClassOf _:genid68 .
+
+_:genid68 a owl:Restriction;
+  owl:minCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onProperty <http://www.w3.org/ns/ssn/implements> .
+
+<http://www.w3.org/ns/sosa/Sensor> <http://www.w3.org/2004/02/skos/core#definition>
+    "Device, agent (including humans), or software (simulation) involved in, or implementing, a (Sensing) Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms."@en,
+    "Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms."@en;
+  <http://www.w3.org/2004/02/skos/core#example> "Accelerometers, gyroscopes, barometers, magnetometers, and so forth are Sensors that are typically mounted on a modern smart phone (which acts as Platform). Other examples of sensors include the human eyes."@en .
+# 
+# http://www.w3.org/ns/ssn/Deployment
+
+<http://www.w3.org/ns/ssn/Deployment> a owl:Class;
+  rdfs:comment "Describes the Deployment of one or more Systems for a particular purpose. Deployment may be done on a Platform."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/ssn/>;
+  rdfs:label "Deployment"@en;
+  rdfs:subClassOf :SSNThing, _:genid69 .
+
+_:genid69 a owl:Restriction;
+  owl:allValuesFrom <http://www.w3.org/ns/sosa/Platform>;
+  owl:onProperty <http://www.w3.org/ns/ssn/deployedOnPlatform> .
+
+<http://www.w3.org/ns/ssn/Deployment> rdfs:subClassOf _:genid70 .
+
+_:genid70 a owl:Restriction;
+  owl:allValuesFrom <http://www.w3.org/ns/ssn/System>;
+  owl:onProperty <http://www.w3.org/ns/ssn/deployedSystem> .
+
+<http://www.w3.org/ns/ssn/Deployment> rdfs:subClassOf _:genid71 .
+
+_:genid71 a owl:Restriction;
+  owl:allValuesFrom <http://www.w3.org/ns/ssn/Property>;
+  owl:onProperty <http://www.w3.org/ns/ssn/forProperty> .
+
+<http://www.w3.org/ns/ssn/Deployment> <http://www.w3.org/2004/02/skos/core#definition>
+    "Describes the Deployment of one or more Systems for a particular purpose. Deployment may be done on a Platform."@en;
+  <http://www.w3.org/2004/02/skos/core#example> "For example, a temperature Sensor deployed on a wall, or a whole network of Sensors deployed for an Observation campaign."@en .
+# 
+# http://www.w3.org/ns/ssn/Input
+
+<http://www.w3.org/ns/ssn/Input> a owl:Class;
+  rdfs:comment "Any information that is provided to a Procedure for its use."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/ssn/>;
+  rdfs:label "Input"@en;
+  rdfs:subClassOf :SSNThing, _:genid72 .
+
+_:genid72 a owl:Restriction;
+  owl:allValuesFrom <http://www.w3.org/ns/sosa/Procedure>;
+  owl:onProperty _:genid73 .
+
+_:genid73 owl:inverseOf <http://www.w3.org/ns/ssn/hasInput> .
+
+<http://www.w3.org/ns/ssn/Input> rdfs:subClassOf _:genid74 .
+
+_:genid74 a owl:Restriction;
+  owl:minCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onProperty _:genid75 .
+
+_:genid75 owl:inverseOf <http://www.w3.org/ns/ssn/hasInput> .
+
+<http://www.w3.org/ns/ssn/Input> <http://www.w3.org/2004/02/skos/core#definition>
+    "Any information that is provided to a Procedure for its use."@en .
+# 
+# http://www.w3.org/ns/ssn/Output
+
+<http://www.w3.org/ns/ssn/Output> a owl:Class;
+  rdfs:comment "Any information that is reported from a Procedure."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/ssn/>;
+  rdfs:label "Output"@en;
+  rdfs:subClassOf :SSNThing, _:genid76 .
+
+_:genid76 a owl:Restriction;
+  owl:allValuesFrom <http://www.w3.org/ns/sosa/Procedure>;
+  owl:onProperty _:genid77 .
+
+_:genid77 owl:inverseOf <http://www.w3.org/ns/ssn/hasOutput> .
+
+<http://www.w3.org/ns/ssn/Output> rdfs:subClassOf _:genid78 .
+
+_:genid78 a owl:Restriction;
+  owl:minCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onProperty _:genid79 .
+
+_:genid79 owl:inverseOf <http://www.w3.org/ns/ssn/hasOutput> .
+
+<http://www.w3.org/ns/ssn/Output> <http://www.w3.org/2004/02/skos/core#definition>
+    "Any information that is reported from a Procedure."@en .
+# 
+# http://www.w3.org/ns/ssn/Property
+
+<http://www.w3.org/ns/ssn/Property> a owl:Class;
+  rdfs:comment "A quality of an entity. An aspect of an entity that is intrinsic to and cannot exist without the entity."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/ssn/>;
+  rdfs:label "Property"@en;
+  rdfs:subClassOf :SSNThing, _:genid80 .
+
+_:genid80 a owl:Restriction;
+  owl:allValuesFrom <http://www.w3.org/ns/sosa/FeatureOfInterest>;
+  owl:onProperty <http://www.w3.org/ns/ssn/isPropertyOf> .
+
+<http://www.w3.org/ns/ssn/Property> <http://www.w3.org/2004/02/skos/core#definition>
+    "A quality of an entity. An aspect of an entity that is intrinsic to and cannot exist without the entity."@en .
+# 
+# http://www.w3.org/ns/ssn/Stimulus
+
+<http://www.w3.org/ns/ssn/Stimulus> a owl:Class;
+  rdfs:comment "An event in the real world that 'triggers' the Sensor. The properties associated to the Stimulus may be different to the eventual observed ObservableProperty. It is the event, not the object, that triggers the Sensor."@en;
+  rdfs:isDefinedBy <http://www.w3.org/ns/ssn/>;
+  rdfs:label "Stimulus"@en;
+  rdfs:subClassOf :SSNThing, _:genid81 .
+
+_:genid81 a owl:Restriction;
+  owl:allValuesFrom <http://www.w3.org/ns/sosa/ObservableProperty>;
+  owl:onProperty <http://www.w3.org/ns/ssn/isProxyFor> .
+
+<http://www.w3.org/ns/ssn/Stimulus> rdfs:subClassOf _:genid82 .
+
+_:genid82 a owl:Restriction;
+  owl:allValuesFrom <http://www.w3.org/ns/sosa/Sensor>;
+  owl:onProperty _:genid83 .
+
+_:genid83 owl:inverseOf <http://www.w3.org/ns/ssn/detects> .
+
+<http://www.w3.org/ns/ss                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                or1-Obs-3
+
+<http://example.org/anomaly#S_TempSensor1-Obs-3> a owl:NamedIndividual, <http://www.w3.org/ns/sosa/Observation>;
+  <http://example.org/anomaly#hasTime> <http://www.w3.org/2006/time#t-obs-S_TempSensor1-3>;
+  <http://www.w3.org/ns/sosa/hasSimpleResult> "24.0^^http://www.w3.org/2001/XMLSchema#double";
+  <http://www.w3.org/ns/sosa/observedProperty> <http://example.org/anomaly#TempSensor1> .
+
+<http://www.w3.org/2006/time#t-obs-S_TempSensor1-3> a owl:NamedIndividual .
+# 
+# http://example.org/anomaly#S_TempSensor1-Obs-31
+
+<http://example.org/anomaly#S_TempSensor1-Obs-31> a owl:NamedIndividual, <http://www.w3.org/ns/sosa/Observation>;
+  <http://example.org/anomaly#hasTime> <http://www.w3.org/2006/time#t-obs-S_TempSensor1-31>;
+  <http://www.w3.org/ns/sosa/hasSimpleResult> "24.0^^http://www.w3.org/2001/XMLSchema#double";
+  <http://www.w3.org/ns/sosa/observedProperty> <http://example.org/anomaly#TempSensor1> .
+
+<http://www.w3.org/2006/time#t-obs-S_TempSensor1-31> a owl:NamedIndividual .
+# 
+# http://example.org/anomaly#S_TempSensor1-Obs-38
+
+<http://example.org/anomaly#S_TempSensor1-Obs-38> a owl:NamedIndividual, <http://www.w3.org/ns/sosa/Observation>;
+  <http://example.org/anomaly#hasTime> <http://www.w3.org/2006/time#t-obs-S_TempSensor1-38>;
+  <http://www.w3.org/ns/sosa/hasSimpleResult> "24.0^^http://www.w3.org/2001/XMLSchema#double";
+  <http://www.w3.org/ns/sosa/observedProperty> <http://example.org/anomaly#TempSensor1> .
+
+<http://www.w3.org/2006/time#t-obs-S_TempSensor1-38> a owl:NamedIndividual .
+# 
+# http://example.org/anomaly#S_TempSensor1-Obs-45
+
+<http://example.org/anomaly#S_TempSensor1-Obs-45> a owl:NamedIndividual, <http://www.w3.org/ns/sosa/Observation>;
+  <http://example.org/anomaly#hasTime> <http://www.w3.org/2006/time#t-obs-S_TempSensor1-45>;
+  <http://www.w3.org/ns/sosa/hasSimpleResult> "24.0^^http://www.w3.org/2001/XMLSchema#double";
+  <http://www.w3.org/ns/sosa/observedProperty> <http://example.org/anomaly#TempSensor1> .
+
+<http://www.w3.org/2006/time#t-obs-S_TempSensor1-45> a owl:NamedIndividual .
+# 
+# http://example.org/anomaly#S_TempSensor2-Obs-11
+
+<http://example.org/anomaly#S_TempSensor2-Obs-11> a owl:NamedIndividual, <http://www.w3.org/ns/sosa/Observation>;
+  <http://example.org/anomaly#hasTime> <http://www.w3.org/2006/time#t-obs-S_TempSensor2-11>;
+  <http://www.w3.org/ns/sosa/hasSimpleResult> "24.7^^http://www.w3.org/2001/XMLSchema#double";
+  <http://www.w3.org/ns/sosa/observedProperty> <http://example.org/anomaly#TempSensor2> .
+
+<http://www.w3.org/2006/time#t-obs-S_TempSensor2-11> a owl:NamedIndividual .
+
+<http://example.org/anomaly#TempSensor2> a owl:NamedIndividual .
+# 
+# http://example.org/anomaly#S_TempSensor2-Obs-18
+
+<http://example.org/anomaly#S_TempSensor2-Obs-18> a owl:NamedIndividual, <http://www.w3.org/ns/sosa/Observation>;
+  <http://example.org/anomaly#hasTime> <http://www.w3.org/2006/time#t-obs-S_TempSensor2-18>;
+  <http://www.w3.org/ns/sosa/hasSimpleResult> "24.7^^http://www.w3.org/2001/XMLSchema#double";
+  <http://www.w3.org/ns/sosa/observedProperty> <http://example.org/anomaly#TempSensor2> .
+
+<http://www.w3.org/2006/time#t-obs-S_TempSensor2-18> a owl:NamedIndividual .
+# 
+# http://example.org/anomaly#S_TempSensor2-Obs-25
+
+<http://example.org/anomaly#S_TempSensor2-Obs-25> a owl:NamedIndividual, <http://www.w3.org/ns/sosa/Observation>;
+  <http://example.org/anomaly#hasTime> <http://www.w3.org/2006/time#t-obs-S_TempSensor2-25>;
+  <http://www.w3.org/ns/sosa/hasSimpleResult> "24.7^^http://www.w3.org/2001/XMLSchema#double";
+  <http://www.w3.org/ns/sosa/observedProperty> <http://example.org/anomaly#TempSensor2> .
+
+<http://www.w3.org/2006/time#t-obs-S_TempSensor2-25> a owl:NamedIndividual .
+# 
+# http://example.org/anomaly#S_TempSensor2-Obs-32
+
+<http://example.org/anomaly#S_TempSensor2-Obs-32> a owl:NamedIndividual, <http://www.w3.org/ns/sosa/Observation>;
+  <http://example.org/anomaly#hasTime> <http://www.w3.org/2006/time#t-obs-S_TempSensor2-32>;
+  <http://www.w3.org/ns/sosa/hasSimpleResult> "24.7^^http://www.w3.org/2001/XMLSchema#double";
+  <http://www.w3.org/ns/sosa/observedProperty> <http://example.org/anomaly#TempSensor2> .
+
+<http://www.w3.org/2006/time#t-obs-S_TempSensor2-32> a owl:NamedIndividual .
+# 
+# http://example.org/anomaly#S_TempSensor2-Obs-39
+
+<http://example.org/anomaly#S_TempSensor2-Obs-39> a owl:NamedIndividual, <http://www.w3.org/ns/sosa/Observation>;
+  <http://example.org/anomaly#hasTime> <http://www.w3.org/2006/time#t-obs-S_TempSensor2-39>;
+  <http://www.w3.org/ns/sosa/hasSimpleResult> "24.7^^http://www.w3.org/2001/XMLSchema#double";
+  <http://www.w3.org/ns/sosa/observedProperty> <http://example.org/anomaly#TempSensor2> .
+
+<http://www.w3.org/2006/time#t-obs-S_TempSensor2-39> a owl:NamedIndividual .
+# 
+# http://example.org/anomaly#S_TempSensor2-Obs-4
+
+<http://example.org/anomaly#S_TempSensor2-Obs-4> a owl:NamedIndividual, <http://www.w3.org/ns/sosa/Observation>;
+  <http://example.org/anomaly#hasTime> <http://www.w3.org/2006/time#t-obs-S_TempSensor2-4>;
+  <http://www.w3.org/ns/sosa/hasSimpleResult> "24.7^^http://www.w3.org/2001/XMLSchema#double";
+  <http://www.w3.org/ns/sosa/observedProperty> <http://example.org/anomaly#TempSensor2> .
+
+<http://www.w3.org/2006/time#t-obs-S_TempSensor2-4> a owl:NamedIndividual .
+# 
+# http://example.org/anomaly#S_TempSensor2-Obs-46
+
+<http://example.org/anomaly#S_TempSensor2-Obs-46> a owl:NamedIndividual, <http://www.w3.org/ns/sosa/Observation>;
+  <http://example.org/anomaly#hasTime> <http://www.w3.org/2006/time#t-obs-S_TempSensor2-46>;
+  <http://www.w3.org/ns/sosa/hasSimpleResult> "24.7^^http://www.w3.org/2001/XMLSchema#double";
+  <http://www.w3.org/ns/sosa/observedProperty> <http://example.org/anomaly#TempSensor2> .
+
+<http://www.w3.org/2006/time#t-obs-S_TempSensor2-46> a owl:NamedIndividual .
+# 
+# http://example.org/anomaly#S_TempSensor3-Obs-12
+
+<http://example.org/anomaly#S_TempSensor3-Obs-12> a owl:NamedIndividual, <http://www.w3.org/ns/sosa/Observation>;
+  <http://example.org/anomaly#hasTime> <http://www.w3.org/2006/time#t-obs-S_TempSensor3-12>;
+  <http://www.w3.org/ns/sosa/hasSimpleResult> "24.5^^http://www.w3.org/2001/XMLSchema#double";
+  <http://www.w3.org/ns/sosa/observedProperty> <http://example.org/anomaly#TempSensor3> .
+
+<http://www.w3.org/2006/time#t-obs-S_TempSensor3-12> a owl:NamedIndividual .
+
+<http://example.org/anomaly#TempSensor3> a owl:NamedIndividual .
+# 
+# http://example.org/anomaly#S_TempSensor3-Obs-19
+
+<http://example.org/anomaly#S_TempSensor3-Obs-19> a owl:NamedIndividual, <http://www.w3.org/ns/sosa/Observation>;
+  <http://example.org/anomaly#hasTime> <http://www.w3.org/2006/time#t-obs-S_TempSensor3-19>;
+  <http://www.w3.org/ns/sosa/hasSimpleResult> "24.5^^http://www.w3.org/2001/XMLSchema#double";
+  <http://www.w3.org/ns/sosa/observedProperty> <http://example.org/anomaly#TempSensor3> .
+
+<http://www.w3.org/2006/time#t-obs-S_TempSensor3-19> a owl:NamedIndividual .
+# 
+# http://example.org/anomaly#S_TempSensor3-Obs-26
+
+<http://example.org/anomaly#S_TempSensor3-Obs-26> a owl:NamedIndividual, <http://www.w3.org/ns/sosa/Observation>;
+  <http://example.org/anomaly#hasTime> <http://www.w3.org/2006/time#t-obs-S_TempSensor3-26>;
+  <http://www.w3.org/ns/sosa/hasSimpleResult> "24.5^^http://www.w3.org/2001/XMLSchema#double";
+  <http://www.w3.org/ns/sosa/observedProperty> <http://example.org/anomaly#TempSensor3> .
+
+<http://www.w3.org/2006/time#t-obs-S_TempSensor3-26> a owl:NamedIndividual .
+# 
+# http://example.org/anomaly#S_TempSensor3-Obs-33
+
+<http://example.org/anomaly#S_TempSensor3-Obs-33> a owl:NamedIndividual, <http://www.w3.org/ns/sosa/Observation>;
+  <http://example.org/anomaly#hasTime> <http://www.w3.org/2006/time#t-obs-S_TempSensor3-33>;
+  <http://www.w3.org/ns/sosa/hasSimpleResult> "24.5^^http://www.w3.org/2001/XMLSchema#double";
+  <http://www.w3.org/ns/sosa/observedProperty> <http://example.org/anomaly#TempSensor3> .
+
+<http://www.w3.org/2006/time#t-obs-S_TempSensor3-33> a owl:NamedIndividual .
+# 
+# http://example.org/anomaly#S_TempSensor3-Obs-40
+
+<http://example.org/anomaly#S_TempSensor3-Obs-40> a owl:NamedIndividual, <http://www.w3.org/ns/sosa/Observation>;
+  <http://example.org/anomaly#hasTime> <http://www.w3.org/2006/time#t-obs-S_TempSensor3-40>;
+  <http://www.w3.org/ns/sosa/hasSimpleResult> "24.5^^http://www.w3.org/2001/XMLSchema#double";
+  <http://www.w3.org/ns/sosa/observedProperty> <http://example.org/anomaly#TempSensor3> .
+
+<http://www.w3.org/2006/time#t-obs-S_TempSensor3-40> a owl:NamedIndividual .
+# 
+# http://example.org/anomaly#S_TempSensor3-Obs-47
+
+<http://example.org/anomaly#S_TempSensor3-Obs-47> a owl:NamedIndividual, <http://www.w3.org/ns/sosa/Observation>;
+  <http://example.org/anomaly#hasTime> <http://www.w3.org/2006/time#t-obs-S_TempSensor3-47>;
+  <http://www.w3.org/ns/sosa/hasSimpleResult> "24.5^^http://www.w3.org/2001/XMLSchema#double";
+  <http://www.w3.org/ns/sosa/observedProperty> <http://example.org/anomaly#TempSensor3> .
+
+<http://www.w3.org/2006/time#t-obs-S_TempSensor3-47> a owl:NamedIndividual .
+# 
+# http://example.org/anomaly#S_TempSensor3-Obs-5
+
+<http://example.org/anomaly#S_TempSensor3-Obs-5> a owl:NamedIndividual, <http://www.w3.org/ns/sosa/Observation>;
+  <http://example.org/anomaly#hasTime> <http://www.w3.org/2006/time#t-obs-S_TempSensor3-5>;
+  <http://www.w3.org/ns/sosa/hasSimpleResult> "24.5^^http://www.w3.org/2001/XMLSchema#double";
+  <http://www.w3.org/ns/sosa/observedProperty> <http://example.org/anomaly#TempSensor3> .
+
+<http://www.w3.org/2006/time#t-obs-S_TempSensor3-5> a owl:NamedIndividual .
+# 
+# http://example.org/anomaly#S_Voltage-Obs-1
+
+<http://example.org/anomaly#S_Voltage-Obs-1> a owl:NamedIndividual, <http://www.w3.org/ns/sosa/Observation>;
+  <http://example.org/anomaly#hasTime> <http://www.w3.org/2006/time#t-obs-S_Voltage-1>;
+  <http://www.w3.org/ns/sosa/hasSimpleResult> "4.20634920634921^^http://www.w3.org/2001/XMLSchema#double";
+  <http://www.w3.org/ns/sosa/observedProperty> <http://example.org/anomaly#Voltage> .
+
+<http://www.w3.org/2006/time#t-obs-S_Voltage-1> a owl:NamedIndividual .
+
+<http://example.org/anomaly#Voltage> a owl:NamedIndividual .
+# 
+# http://example.org/anomaly#S_Voltage-Obs-15
+
+<http://example.org/anomaly#S_Voltage-Obs-15> a owl:NamedIndividual, <http://www.w3.org/ns/sosa/Observation>;
+  <http://example.org/anomaly#hasTime> <http://www.w3.org/2006/time#t-obs-S_Voltage-15>;
+  <http://www.w3.org/ns/sosa/hasSimpleResult> "4.20634920634921^^http://www.w3.org/2001/XMLSchema#double";
+  <http://www.w3.org/ns/sosa/observedProperty> <http://example.org/anomaly#Voltage> .
+
+<http://www.w3.org/2006/time#t-obs-S_Voltage-15> a owl:NamedIndividual .
+# 
+# http://example.org/anomaly#S_Voltage-Obs-22
+
+<http://example.org/anomaly#S_Voltage-Obs-22> a owl:NamedIndividual, <http://www.w3.org/ns/sosa/Observation>;
+  <http://example.org/anomaly#hasTime> <http://www.w3.org/2006/time#t-obs-S_Voltage-22>;
+  <http://www.w3.org/ns/sosa/hasSimpleResult> "4.20634920634921^^http://www.w3.org/2001/XMLSchema#double";
+  <http://www.w3.org/ns/sosa/observedProperty> <http://example.org/anomaly#Voltage> .
+
+<http://www.w3.org/2006/time#t-obs-S_Voltage-22> a owl:NamedIndividual .
+# 
+# http://example.org/anomaly#S_Voltage-Obs-29
+
+<http://example.org/anomaly#S_Voltage-Obs-29> a owl:NamedIndividual, <http://www.w3.org/ns/sosa/Observation>;
+  <http://example.org/anomaly#hasTime> <http://www.w3.org/2006/time#t-obs-S_Voltage-29>;
+  <http://www.w3.org/ns/sosa/hasSimpleResult> "4.206349206349208^^http://www.w3.org/2001/XMLSchema#double";
+  <http://www.w3.org/ns/sosa/observedProperty> <http://example.org/anomaly#Voltage> .
+
+<http://www.w3.org/2006/time#t-obs-S_Voltage-29> a owl:NamedIndividual .
+# 
+# http://example.org/anomaly#S_Voltage-Obs-36
+
+<http://example.org/anomaly#S_Voltage-Obs-36> a owl:NamedIndividual, <http://www.w3.org/ns/sosa/Observation>;
+  <http://example.org/anomaly#hasTime> <http://www.w3.org/2006/time#t-obs-S_Voltage-36>;
+  <http://www.w3.org/ns/sosa/hasSimpleResult> "4.206349206349208^^http://www.w3.org/2001/XMLSchema#double";
+  <http://www.w3.org/ns/sosa/observedProperty> <http://example.org/anomaly#Voltage> .
+
+<http://www.w3.org/2006/time#t-obs-S_Voltage-36> a owl:NamedIndividual .
+# 
+# http://example.org/anomaly#S_Voltage-Obs-43
+
+<http://example.org/anomaly#S_Voltage-Obs-43> a owl:NamedIndividual, <http://www.w3.org/ns/sosa/Observation>;
+  <http://example.org/anomaly#hasTime> <http://www.w3.org/2006/time#t-obs-S_Voltage-43>;
+  <http://www.w3.org/ns/sosa/hasSimpleResult> "4.206349206349208^^http://www.w3.org/2001/XMLSchema#double";
+  <http://www.w3.org/ns/sosa/observedProperty> <http://example.org/anomaly#Voltage> .
+
+<http://www.w3.org/2006/time#t-obs-S_Voltage-43> a owl:NamedIndividual .
+# 
+# http://example.org/anomaly#S_Voltage-Obs-8
+
+<http://example.org/anomaly#S_Voltage-Obs-8> a owl:NamedIndividual, <http://www.w3.org/ns/sosa/Observation>;
+  <http://example.org/anomaly#hasTime> <http://www.w3.org/2006/time#t-obs-S_Voltage-8>;
+  <http://www.w3.org/ns/sosa/hasSimpleResult> "4.20634920634921^^http://www.w3.org/2001/XMLSchema#double";
+  <http://www.w3.org/ns/sosa/observedProperty> <http://example.org/anomaly#Voltage> .
+
+<http://www.w3.org/2006/time#t-obs-S_Voltage-8> a owl:NamedIndividual .
+# 
+# http://example.org/anomaly#Soc1
+
+<http://example.org/anomaly#Soc1> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    <http://www.w3.org/ns/sosa/Sensor>;
+  <http://www.w3.org/ns/sosa/madeObservation> <http://example.org/anomaly#S_Soc1-Obs-13>,
+    <http://example.org/anomaly#S_Soc1-Obs-20>, <http://example.org/anomaly#S_Soc1-Obs-27>,
+    <http://example.org/anomaly#S_Soc1-Obs-34>, <http://example.org/anomaly#S_Soc1-Obs-41>,
+    <http://example.org/anomaly#S_Soc1-Obs-48>, <http://example.org/anomaly#S_Soc1-Obs-6> .
+# 
+# http://example.org/anomaly#TempAmbiant
+
+<http://example.org/anomaly#TempAmbiant> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    <http://www.w3.org/ns/sosa/Sensor>;
+  <http://www.w3.org/ns/sosa/madeObservation> <http://example.org/anomaly#S_TempAmbiant-Obs-16>,
+    <http://example.org/anomaly#S_TempAmbiant-Obs-2>, <http://example.org/anomaly#S_TempAmbiant-Obs-23>,
+    <http://example.org/anomaly#S_TempAmbiant-Obs-30>, <http://example.org/anomaly#S_TempAmbiant-Obs-37>,
+    <http://example.org/anomaly#S_TempAmbiant-Obs-44>, <http://example.org/anomaly#S_TempAmbiant-Obs-9> .
+# 
+# http://example.org/anomaly#TempSensor1
+
+<http://example.org/anomaly#TempSensor1> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    <http://www.w3.org/ns/sosa/Sensor>;
+  <http://www.w3.org/ns/sosa/madeObservation> <http://example.org/anomaly#S_TempSensor1-Obs-10>,
+    <http://example.org/anomaly#S_TempSensor1-Obs-17>, <http://example.org/anomaly#S_TempSensor1-Obs-24>,
+    <http://example.org/anomaly#S_TempSensor1-Obs-3>, <http://example.org/anomaly#S_TempSensor1-Obs-31>,
+    <http://example.org/anomaly#S_TempSensor1-Obs-38>, <http://example.org/anomaly#S_TempSensor1-Obs-45> .
+# 
+# http://example.org/anomaly#TempSensor2
+
+<http://example.org/anomaly#TempSensor2> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    <http://www.w3.org/ns/sosa/Sensor>;
+  <http://www.w3.org/ns/sosa/madeObservation> <http://example.org/anomaly#S_TempSensor2-Obs-11>,
+    <http://example.org/anomaly#S_TempSensor2-Obs-18>, <http://example.org/anomaly#S_TempSensor2-Obs-25>,
+    <http://example.org/anomaly#S_TempSensor2-Obs-32>, <http://example.org/anomaly#S_TempSensor2-Obs-39>,
+    <http://example.org/anomaly#S_TempSensor2-Obs-4>, <http://example.org/anomaly#S_TempSensor2-Obs-46> .
+# 
+# http://example.org/anomaly#TempSensor3
+
+<http://example.org/anomaly#TempSensor3> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    <http://www.w3.org/ns/sosa/Sensor>;
+  <http://www.w3.org/ns/sosa/madeObservation> <http://example.org/anomaly#S_TempSensor3-Obs-12>,
+    <http://example.org/anomaly#S_TempSensor3-Obs-19>, <http://example.org/anomaly#S_TempSensor3-Obs-26>,
+    <http://example.org/anomaly#S_TempSensor3-Obs-33>, <http://example.org/anomaly#S_TempSensor3-Obs-40>,
+    <http://example.org/anomaly#S_TempSensor3-Obs-47>, <http://example.org/anomaly#S_TempSensor3-Obs-5> .
+# 
+# http://example.org/anomaly#Voltage
+
+<http://example.org/anomaly#Voltage> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    <http://www.w3.org/ns/sosa/Sensor>;
+  <http://www.w3.org/ns/sosa/madeObservation> <http://example.org/anomaly#S_Voltage-Obs-1>,
+    <http://example.org/anomaly#S_Voltage-Obs-15>, <http://example.org/anomaly#S_Voltage-Obs-22>,
+    <http://example.org/anomaly#S_Voltage-Obs-29>, <http://example.org/anomaly#S_Voltage-Obs-36>,
+    <http://example.org/anomaly#S_Voltage-Obs-43>, <http://example.org/anomaly#S_Voltage-Obs-8> .
+# 
+# http://example.org/anomaly.owl#Cell1
+
+<http://example.org/anomaly.owl#Cell1> a <http://example.org/anomaly.owl#Cell1>, owl:NamedIndividual;
+  <http://example.org/anomaly.owl#concernBy> <http://example.org/anomaly.owl#highTemp-1756377395205>,
+    <http://example.org/anomaly.owl#highTemp-1756377396776>, <http://example.org/anomaly.owl#highTemp-1756377397979>,
+    <http://example.org/anomaly.owl#highTemp-1756377399170>, <http://example.org/anomaly.owl#highTemp-1756377400128>,
+    <http://example.org/anomaly.owl#highTemp-1756377401215>, <http://example.org/anomaly.owl#highTemp-1756377402325>,
+    <http://example.org/anomaly.owl#highTemp-1756377403396>, <http://example.org/anomaly.owl#highTemp-1756377405558>,
+    <http://example.org/anomaly.owl#highTemp-1756377406347>, <http://example.org/anomaly.owl#highTemp-1756377407299>,
+    <http://example.org/anomaly.owl#highTemp-1756377408351>, <http://example.org/anomaly.owl#highTemp-1756377409599>,
+    <http://example.org/anomaly.owl#highTemp-1756377411172>, <http://example.org/anomaly.owl#highTemp-1756377412143>,
+    <http://example.org/anomaly.owl#highTemp-1756377413968>, <http://example.org/anomaly.owl#highTemp-1756377414744>,
+    <http://example.org/anomaly.owl#highTemp-1756377415858>, <http://example.org/anomaly.owl#highTemp-1756377417031>,
+    <http://example.org/anomaly.owl#highTemp-1756377417929>, <http://example.org/anomaly.owl#highTemp-1756377419385>,
+    <http://example.org/anomaly.owl#highTemp-1756377421136>, <http://example.org/anomaly.owl#highTemp-1756377422409>,
+    <http://example.org/anomaly.owl#highTemp-1756377424018>, <http://example.org/anomaly.owl#highTemp-1756377425126>,
+    <http://example.org/anomaly.owl#highTemp-1756377426426>, <http://example.org/anomaly.owl#highTemp-1756377427622>,
+    <http://example.org/anomaly.owl#highTemp-1756377428961>, <http://example.org/anomaly.owl#highTemp-1756377430646>,
+    <http://example.org/anomaly.owl#highTemp-1756377431772>, <http://example.org/anomaly.owl#highTemp-1756377433194>,
+    <http://example.org/anomaly.owl#highTemp-1756377435352>;
+  <http://example.org/anomaly.owl#hosts> <http://example.org/anomaly.owl#CurrentSensor>,
+    <http://example.org/anomaly.owl#SOC1>, <http://example.org/anomaly.owl#TempSensor1>,
+    <http://example.org/anomaly.owl#TempSensor2>, <http://example.org/anomaly.owl#TempSensor3> .
+
+<http://example.org/anomaly.owl#highTemp-1756377395205> a owl:NamedIndividual .
+
+<http://example.org/anomaly.owl#highTemp-1756377396776> a owl:NamedIndividual .
+
+<http://example.org/anomaly.owl#highTemp-1756377397979> a owl:NamedIndividual .
+
+<http://example.org/anomaly.owl#highTemp-1756377399170> a owl:NamedIndividual .
+
+<http://example.org/anomaly.owl#highTemp-1756377400128> a owl:NamedIndividual .
+
+<http://example.org/anomaly.owl#highTemp-1756377401215> a owl:NamedIndividual .
+
+<http://example.org/anomaly.owl#highTemp-1756377402325> a owl:NamedIndividual .
+
+<http://example.org/anomaly.owl#highTemp-1756377403396> a owl:NamedIndividual .
+
+<http://example.org/anomaly.owl#highTemp-1756377405558> a owl:NamedIndividual .
+
+<http://example.org/anomaly.owl#highTemp-1756377406347> a owl:NamedIndividual .
+
+<http://example.org/anomaly.owl#highTemp-1756377407299> a owl:NamedIndividual .
+
+<http://example.org/anomaly.owl#highTemp-1756377408351> a owl:NamedIndividual .
+
+<http://example.org/anomaly.owl#highTemp-1756377409599> a owl:NamedIndividual .
+
+<http://example.org/anomaly.owl#highTemp-1756377411172> a owl:NamedIndividual .
+
+<http://example.org/anomaly.owl#highTemp-1756377412143> a owl:NamedIndividual .
+
+<http://example.org/anomaly.owl#highTemp-1756377413968> a owl:NamedIndividual .
+
+<http://example.org/anomaly.owl#highTemp-1756377414744> a owl:NamedIndividual .
+
+<http://example.org/anomaly.owl#highTemp-1756377415858> a owl:NamedIndividual .
+
+<http://example.org/anomaly.owl#highTemp-1756377417031> a owl:NamedIndividual .
+
+<http://example.org/anomaly.owl#highTemp-1756377417929> a owl:NamedIndividual .
+
+<http://example.org/anomaly.owl#highTemp-1756377419385> a owl:NamedIndividual .
+
+<http://example.org/anomaly.owl#highTemp-1756377421136> a owl:NamedIndividual .
+
+<http://example.org/anomaly.owl#highTemp-1756377422409> a owl:NamedIndividual .
+
+<http://example.org/anomaly.owl#highTemp-1756377424018> a owl:NamedIndividual .
+
+<http://example.org/anomaly.owl#highTemp-1756377425126> a owl:NamedIndividual .
+
+<http://example.org/anomaly.owl#highTemp-1756377426426> a owl:NamedIndividual .
+
+<http://example.org/anomaly.owl#highTemp-1756377427622> a owl:NamedIndividual .
+
+<http://example.org/anomaly.owl#highTemp-1756377428961> a owl:NamedIndividual .
+
+<http://example.org/anomaly.owl#highTemp-1756377430646> a owl:NamedIndividual .
+
+<http://example.org/anomaly.owl#highTemp-1756377431772> a owl:NamedIndividual .
+
+<http://example.org/anomaly.owl#highTemp-1756377433194> a owl:NamedIndividual .
+
+<http://example.org/anomaly.owl#highTemp-1756377435352> a owl:NamedIndividual .
+
+<http://example.org/anomaly.owl#CurrentSensor> a owl:NamedIndividual .
+
+<http://example.org/anomaly.owl#SOC1> a owl:NamedIndividual .
+
+<http://example.org/anomaly.owl#TempSensor1> a owl:NamedIndividual .
+
+<http://example.org/anomaly.owl#TempSensor2> a owl:NamedIndividual .
+
+<http://example.org/anomaly.owl#TempSensor3> a owl:NamedIndividual .
+# 
+# http://example.org/anomaly.owl#CurrentSensor
+# 
+# http://example.org/anomaly.owl#SOC1
+# 
+# http://example.org/anomaly.owl#TempSensor1
+# 
+# http://example.org/anomaly.owl#TempSensor2
+# 
+# http://example.org/anomaly.owl#TempSensor3
+# 
+# http://example.org/anomaly.owl#highTemp-1756377395205
+
+<http://example.org/anomaly.owl#highTemp-1756377395205> a <http://example.org/anomaly.owl#Situation> .
+# 
+# http://example.org/anomaly.owl#highTemp-1756377396776
+
+<http://example.org/anomaly.owl#highTemp-1756377396776> a <http://example.org/anomaly.owl#Situation> .
+# 
+# http://example.org/anomaly.owl#highTemp-1756377397979
+
+<http://example.org/anomaly.owl#highTemp-1756377397979> a <http://example.org/anomaly.owl#Situation> .
+# 
+# http://example.org/anomaly.owl#highTemp-1756377399170
+
+<http://example.org/anomaly.owl#highTemp-1756377399170> a <http://example.org/anomaly.owl#Situation> .
+# 
+# http://example.org/anomaly.owl#highTemp-1756377400128
+
+<http://example.org/anomaly.owl#highTemp-1756377400128> a <http://example.org/anomaly.owl#Situation> .
+# 
+# http://example.org/anomaly.owl#highTemp-1756377401215
+
+<http://example.org/anomaly.owl#highTemp-1756377401215> a <http://example.org/anomaly.owl#Situation> .
+# 
+# http://example.org/anomaly.owl#highTemp-1756377402325
+
+<http://example.org/anomaly.owl#highTemp-1756377402325> a <http://example.org/anomaly.owl#Situation> .
+# 
+# http://example.org/anomaly.owl#highTemp-1756377403396
+
+<http://example.org/anomaly.owl#highTemp-1756377403396> a <http://example.org/anomaly.owl#Situation> .
+# 
+# http://example.org/anomaly.owl#highTemp-1756377405558
+
+<http://example.org/anomaly.owl#highTemp-1756377405558> a <http://example.org/anomaly.owl#Situation> .
+# 
+# http://example.org/anomaly.owl#highTemp-1756377406347
+
+<http://example.org/anomaly.owl#highTemp-1756377406347> a <http://example.org/anomaly.owl#Situation> .
+# 
+# http://example.org/anomaly.owl#highTemp-1756377407299
+
+<http://example.org/anomaly.owl#highTemp-1756377407299> a <http://example.org/anomaly.owl#Situation> .
+# 
+# http://example.org/anomaly.owl#highTemp-1756377408351
+
+<http://example.org/anomaly.owl#highTemp-1756377408351> a <http://example.org/anomaly.owl#Situation> .
+# 
+# http://example.org/anomaly.owl#highTemp-1756377409599
+
+<http://example.org/anomaly.owl#highTemp-1756377409599> a <http://example.org/anomaly.owl#Situation> .
+# 
+# http://example.org/anomaly.owl#highTemp-1756377411172
+
+<http://example.org/anomaly.owl#highTemp-1756377411172> a <http://example.org/anomaly.owl#Situation> .
+# 
+# http://example.org/anomaly.owl#highTemp-1756377412143
+
+<http://example.org/anomaly.owl#highTemp-1756377412143> a <http://example.org/anomaly.owl#Situation> .
+# 
+# http://example.org/anomaly.owl#highTemp-1756377413968
+
+<http://example.org/anomaly.owl#highTemp-1756377413968> a <http://example.org/anomaly.owl#Situation> .
+# 
+# http://example.org/anomaly.owl#highTemp-1756377414744
+
+<http://example.org/anomaly.owl#highTemp-1756377414744> a <http://example.org/anomaly.owl#Situation> .
+# 
+# http://example.org/anomaly.owl#highTemp-1756377415858
+
+<http://example.org/anomaly.owl#highTemp-1756377415858> a <http://example.org/anomaly.owl#Situation> .
+# 
+# http://example.org/anomaly.owl#highTemp-1756377417031
+
+<http://example.org/anomaly.owl#highTemp-1756377417031> a <http://example.org/anomaly.owl#Situation> .
+# 
+# http://example.org/anomaly.owl#highTemp-1756377417929
+
+<http://example.org/anomaly.owl#highTemp-1756377417929> a <http://example.org/anomaly.owl#Situation> .
+# 
+# http://example.org/anomaly.owl#highTemp-1756377419385
+
+<http://example.org/anomaly.owl#highTemp-1756377419385> a <http://example.org/anomaly.owl#Situation> .
+# 
+# http://example.org/anomaly.owl#highTemp-1756377421136
+
+<http://example.org/anomaly.owl#highTemp-1756377421136> a <http://example.org/anomaly.owl#Situation> .
+# 
+# http://example.org/anomaly.owl#highTemp-1756377422409
+
+<http://example.org/anomaly.owl#highTemp-1756377422409> a <http://example.org/anomaly.owl#Situation> .
+# 
+# http://example.org/anomaly.owl#highTemp-1756377424018
+
+<http://example.org/anomaly.owl#highTemp-1756377424018> a <http://example.org/anomaly.owl#Situation> .
+# 
+# http://example.org/anomaly.owl#highTemp-1756377425126
+
+<http://example.org/anomaly.owl#highTemp-1756377425126> a <http://example.org/anomaly.owl#Situation> .
+# 
+# http://example.org/anomaly.owl#highTemp-1756377426426
+
+<http://example.org/anomaly.owl#highTemp-1756377426426> a <http://example.org/anomaly.owl#Situation> .
+# 
+# http://example.org/anomaly.owl#highTemp-1756377427622
+
+<http://example.org/anomaly.owl#highTemp-1756377427622> a <http://example.org/anomaly.owl#Situation> .
+# 
+# http://example.org/anomaly.owl#highTemp-1756377428961
+
+<http://example.org/anomaly.owl#highTemp-1756377428961> a <http://example.org/anomaly.owl#Situation> .
+# 
+# http://example.org/anomaly.owl#highTemp-1756377430646
+
+<http://example.org/anomaly.owl#highTemp-1756377430646> a <http://example.org/anomaly.owl#Situation> .
+# 
+# http://example.org/anomaly.owl#highTemp-1756377431772
+
+<http://example.org/anomaly.owl#highTemp-1756377431772> a <http://example.org/anomaly.owl#Situation> .
+# 
+# http://example.org/anomaly.owl#highTemp-1756377433194
+
+<http://example.org/anomaly.owl#highTemp-1756377433194> a <http://example.org/anomaly.owl#Situation> .
+# 
+# http://example.org/anomaly.owl#highTemp-1756377435352
+
+<http://example.org/anomaly.owl#highTemp-1756377435352> a <http://example.org/anomaly.owl#Situation> .
+# 
+# http://www.w3.org/2006/time#t-obs-S_CurrentSensor-0
+
+<http://www.w3.org/2006/time#t-obs-S_CurrentSensor-0> a <http://www.w3.org/2006/time#Instant>;
+  <http://www.w3.org/2006/time#inXSDDateTimeStamp> "1970-01-01 01:00:00.0^^http://www.w3.org/2001/XMLSchema#dateTimeStamp" .
+# 
+# http://www.w3.org/2006/time#t-obs-S_CurrentSensor-14
+
+<http://www.w3.org/2006/time#t-obs-S_CurrentSensor-14> a <http://www.w3.org/2006/time#Instant>;
+  <http://www.w3.org/2006/time#inXSDDateTimeStamp> "1970-01-01 01:00:00.0^^http://www.w3.org/2001/XMLSchema#dateTimeStamp" .
+# 
+# http://www.w3.org/2006/time#t-obs-S_CurrentSensor-21
+
+<http://www.w3.org/2006/time#t-obs-S_CurrentSensor-21> a <http://www.w3.org/2006/time#Instant>;
+  <http://www.w3.org/2006/time#inXSDDateTimeStamp> "1970-01-01 01:00:00.0^^http://www.w3.org/2001/XMLSchema#dateTimeStamp" .
+# 
+# http://www.w3.org/2006/time#t-obs-S_CurrentSensor-28
+
+<http://www.w3.org/2006/time#t-obs-S_CurrentSensor-28> a <http://www.w3.org/2006/time#Instant>;
+  <http://www.w3.org/2006/time#inXSDDateTimeStamp> "1970-01-01 01:00:00.0^^http://www.w3.org/2001/XMLSchema#dateTimeStamp" .
+# 
+# http://www.w3.org/2006/time#t-obs-S_CurrentSensor-35
+
+<http://www.w3.org/2006/time#t-obs-S_CurrentSensor-35> a <http://www.w3.org/2006/time#Instant>;
+  <http://www.w3.org/2006/time#inXSDDateTimeStamp> "1970-01-01 01:00:00.0^^http://www.w3.org/2001/XMLSchema#dateTimeStamp" .
+# 
+# http://www.w3.org/2006/time#t-obs-S_CurrentSensor-42
+
+<http://www.w3.org/2006/time#t-obs-S_CurrentSensor-42> a <http://www.w3.org/2006/time#Instant>;
+  <http://www.w3.org/2006/time#inXSDDateTimeStamp> "1970-01-01 01:00:00.0^^http://www.w3.org/2001/XMLSchema#dateTimeStamp" .
+# 
+# http://www.w3.org/2006/time#t-obs-S_CurrentSensor-7
+
+<http://www.w3.org/2006/time#t-obs-S_CurrentSensor-7> a <http://www.w3.org/2006/time#Instant>;
+  <http://www.w3.org/2006/time#inXSDDateTimeStamp> "1970-01-01 01:00:00.0^^http://www.w3.org/2001/XMLSchema#dateTimeStamp" .
+# 
+# http://www.w3.org/2006/time#t-obs-S_Soc1-13
+
+<http://www.w3.org/2006/time#t-obs-S_Soc1-13> a <http://www.w3.org/2006/time#Instant>;
+  <http://www.w3.org/2006/time#inXSDDateTimeStamp> "1970-01-01 01:00:00.0^^http://www.w3.org/2001/XMLSchema#dateTimeStamp" .
+# 
+# http://www.w3.org/2006/time#t-obs-S_Soc1-20
+
+<http://www.w3.org/2006/time#t-obs-S_Soc1-20> a <http://www.w3.org/2006/time#Instant>;
+  <http://www.w3.org/2006/time#inXSDDateTimeStamp> "1970-01-01 01:00:00.0^^http://www.w3.org/2001/XMLSchema#dateTimeStamp" .
+# 
+# http://www.w3.org/2006/time#t-obs-S_Soc1-27
+
+<http://www.w3.org/2006/time#t-obs-S_Soc1-27> a <http://www.w3.org/2006/time#Instant>;
+  <http://www.w3.org/2006/time#inXSDDateTimeStamp> "1970-01-01 01:00:00.0^^http://www.w3.org/2001/XMLSchema#dateTimeStamp" .
+# 
+# http://www.w3.org/2006/time#t-obs-S_Soc1-34
+
+<http://www.w3.org/2006/time#t-obs-S_Soc1-34> a <http://www.w3.org/2006/time#Instant>;
+  <http://www.w3.org/2006/time#inXSDDateTimeStamp> "1970-01-01 01:00:00.0^^http://www.w3.org/2001/XMLSchema#dateTimeStamp" .
+# 
+# http://www.w3.org/2006/time#t-obs-S_Soc1-41
+
+<http://www.w3.org/2006/time#t-obs-S_Soc1-41> a <http://www.w3.org/2006/time#Instant>;
+  <http://www.w3.org/2006/time#inXSDDateTimeStamp> "1970-01-01 01:00:00.0^^http://www.w3.org/2001/XMLSchema#dateTimeStamp" .
+# 
+# http://www.w3.org/2006/time#t-obs-S_Soc1-48
+
+<http://www.w3.org/2006/time#t-obs-S_Soc1-48> a <http://www.w3.org/2006/time#Instant>;
+  <http://www.w3.org/2006/time#inXSDDateTimeStamp> "1970-01-01 01:00:00.0^^http://www.w3.org/2001/XMLSchema#dateTimeStamp" .
+# 
+# http://www.w3.org/2006/time#t-obs-S_Soc1-6
+
+<http://www.w3.org/2006/time#t-obs-S_Soc1-6> a <http://www.w3.org/2006/time#Instant>;
+  <http://www.w3.org/2006/time#inXSDDateTimeStamp> "1970-01-01 01:00:00.0^^http://www.w3.org/2001/XMLSchema#dateTimeStamp" .
+# 
+# http://www.w3.org/2006/time#t-obs-S_TempAmbiant-16
+
+<http://www.w3.org/2006/time#t-obs-S_TempAmbiant-16> a <http://www.w3.org/2006/time#Instant>;
+  <http://www.w3.org/2006/time#inXSDDateTimeStamp> "1970-01-01 01:00:00.0^^http://www.w3.org/2001/XMLSchema#dateTimeStamp" .
+# 
+# http://www.w3.org/2006/time#t-obs-S_TempAmbiant-2
+
+<http://www.w3.org/2006/time#t-obs-S_TempAmbiant-2> a <http://www.w3.org/2006/time#Instant>;
+  <http://www.w3.org/2006/time#inXSDDateTimeStamp> "1970-01-01 01:00:00.0^^http://www.w3.org/2001/XMLSchema#dateTimeStamp" .
+# 
+# http://www.w3.org/2006/time#t-obs-S_TempAmbiant-23
+
+<http://www.w3.org/2006/time#t-obs-S_TempAmbiant-23> a <http://www.w3.org/2006/time#Instant>;
+  <http://www.w3.org/2006/time#inXSDDateTimeStamp> "1970-01-01 01:00:00.0^^http://www.w3.org/2001/XMLSchema#dateTimeStamp" .
+# 
+# http://www.w3.org/2006/time#t-obs-S_TempAmbiant-30
+
+<http://www.w3.org/2006/time#t-obs-S_TempAmbiant-30> a <http://www.w3.org/2006/time#Instant>;
+  <http://www.w3.org/2006/time#inXSDDateTimeStamp> "1970-01-01 01:00:00.0^^http://www.w3.org/2001/XMLSchema#dateTimeStamp" .
+# 
+# http://www.w3.org/2006/time#t-obs-S_TempAmbiant-37
+
+<http://www.w3.org/2006/time#t-obs-S_TempAmbiant-37> a <http://www.w3.org/2006/time#Instant>;
+  <http://www.w3.org/2006/time#inXSDDateTimeStamp> "1970-01-01 01:00:00.0^^http://www.w3.org/2001/XMLSchema#dateTimeStamp" .
+# 
+# http://www.w3.org/2006/time#t-obs-S_TempAmbiant-44
+
+<http://www.w3.org/2006/time#t-obs-S_TempAmbiant-44> a <http://www.w3.org/2006/time#Instant>;
+  <http://www.w3.org/2006/time#inXSDDateTimeStamp> "1970-01-01 01:00:00.0^^http://www.
